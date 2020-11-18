@@ -1,0 +1,117 @@
+#intro {
+  height: 100vh;
+  background-image: url("/photos/intro.jpeg");
+  background-size: cover;
+  position: relative;
+  .burger {
+    display: none;
+    
+  }
+  nav {
+    display: flex;
+    height: 10vh;
+  }
+  //NAVBAR STYLING
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 0 0 0 auto;
+    padding: 4rem;
+    position: relative;
+    height: 10vh;
+  }
+
+  .scroller {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 4rem;
+    color: black;
+    animation: animation 1.5s infinite alternate;
+  }
+  .intro-text-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    .intro-text{
+      width: 60%;
+      margin: auto;
+      color: white;
+      h2{
+        margin: 2rem 0rem;
+        font-size: 4rem;
+      }
+      p{
+        font-size: 3rem;
+      }
+      .more{
+        border: none;
+        background-color: #ffffff;
+        padding: 1rem 2.5rem;
+        color: black;
+        margin-top: 2rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+    
+  }
+  .whatsapp{
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index:2;
+    font-size: 5rem;
+    color: green;
+  }
+  .fb{
+    margin-right: 1rem;
+  }
+
+  //DROPDOWN
+  .dropdown{
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    i{
+      color: white;
+      font-size: 1.5rem;
+      padding: 0.5rem 0 0 1rem
+    }
+  }
+  
+  .content{
+    display: flex;  
+    flex-direction: column;
+    width: 350px;
+    position: absolute;
+    top: 90%;
+    background-color: white;
+    .arrow-dropdown{
+      color: black;
+      font-size: 1.5rem;
+      position: absolute;
+      right: 5%;
+      padding-top: 0.6rem;
+    }
+    a{
+      font-weight: 400;
+      font-size: 2rem;
+      padding: 1rem 2rem;
+    }
+    a:hover{
+      background-color: #fafafa;
+    }
+
+  }
+ 
+  .burger-black{
+    color: black;
+  }
+
+}
+

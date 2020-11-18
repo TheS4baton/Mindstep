@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+h1 {
+  font-size: $header1;
+}
+h2 {
+  font-size: $header2;
+}
+h3 {
+  font-size: $header3;
+}
+a,
+li {
+  font-size: $text;
+  font-weight: 600;
+  color: black;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+p {
+  font-size: $text;
+}
+ul {
+  list-style: none;
+  font-family: font;
+}
+i {
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

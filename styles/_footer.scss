@@ -1,0 +1,45 @@
+#footer {
+  min-height: 50vh;
+  background-color: #454647;
+  display: flex;
+
+  .footer-wrapper {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    .sitemap,
+    .activity,
+    .contact,
+    .about,
+    .personal{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h2{
+            margin-bottom: 2rem;
+        }
+        
+    }
+    .socials{
+        display: flex;
+        margin-top: 1rem;
+        i{  
+            margin-right: 2rem;
+        }
+    }
+    .about{
+        width: 10%;
+        p{
+            margin-top: 1.5rem;
+        }
+    }
+  }
+  a {
+    color: white;
+    font-weight: 400;
+    margin-top: 1.5rem;
+  }
+}

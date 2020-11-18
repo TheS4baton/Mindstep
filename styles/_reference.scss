@@ -1,0 +1,42 @@
+#reference{
+    position: relative;
+    .reference-wrapper{
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+   
+    .heading-media{
+        position: absolute;
+        color: #536260;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        line-height: 0.65;
+    }
+
+    .review{
+        width: 20%;
+        height: auto;
+        background-color: #f8f8f8;
+        padding: 4rem 2rem;
+        position: relative;
+        .stars{
+            margin:1rem 0 2rem 0;
+        }
+        .fa-star{
+            color: #e2b028;
+            font-size: 1.5rem;
+        }
+        
+    }
+    .big{
+        transform: scale(1.2);
+        margin: 0 8rem;
+    }
+    
+    
+    
+}

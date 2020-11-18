@@ -1,0 +1,151 @@
+#occupation {
+  min-height: 100vh;
+  padding-bottom: 18rem;
+  position: relative;
+  .green{
+    color: #1c8a52;
+    font-size: 1.5rem;
+    margin-right:2rem ;
+  }
+  .transition{
+    transition: .5s;
+  }
+  .occupation-div {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    
+
+    .psychology{
+      border-radius: 50%;
+      border: 5px solid #1c8a52;
+    }
+    .training{
+      background-color: #cc772b;
+    }
+    .trainer{
+      border-radius: 50%;
+      border: 5px solid #cc772b;
+    }
+    .balance{
+      border-radius: 50%;
+      border: 5px solid #21acae;
+    }
+
+    img {
+      height: 200px;
+    }
+    .left {
+      margin-right: 4rem;
+    }
+    .right {
+      margin-left: 4rem;
+    }
+    .occupation-text {
+      padding-top: 3rem;
+      p {
+        margin-top: 2rem;
+      }
+    }
+    .mobile {
+      display: none;
+    }
+    .programs-third,
+    .programs-second,
+    .programs {
+      background-color: #eaeaea;
+      border: none;
+      padding: 1rem 2rem;
+      margin-top: 4rem;
+      cursor: pointer;
+      .down {
+        font-size: 1.2rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+  .programs-all{
+    overflow: hidden;
+    position: relative;
+    background-color: #fafafa;
+    .arrow-left,
+    .arrow-right{
+      position: absolute;
+      color: black;
+      transform: translate(0,-50%);
+    }
+    .arrow-left{
+      left: 2%;
+      top: 50%;
+    }
+    .arrow-right{
+      right: 2%;
+      top: 50%;
+    }
+    .dots{
+      .orange,
+      .blue,
+      .green{
+        color: #c4c4c4;
+        margin: 0 2rem 2rem 0;
+        font-size: 1.5rem;
+        
+      }
+      
+      .active{
+        color: #1c8a52;
+      }
+      .active-second{
+        color: #cc772b;
+      }
+      .active-third{
+        color:  #21acae;
+      }
+    }
+  }
+  .race{
+    display: none;
+  }
+  .programs-balance,
+  .programs-learning,
+  .programs-beginner {
+    display: none;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 5rem;
+    h3,
+    h2 {
+      margin: 2rem 0;
+    }
+    ul {
+      li {
+        font-weight: 400;
+        margin-top: 1rem;
+        cursor: default;
+      }
+      .circle {
+        color: green;
+        font-size: 1.5rem;
+        margin-right: 2rem;
+      }
+    }
+    .bottom-bold{
+      margin-top: 4rem;
+      font-size: 2rem;
+    }
+  }
+ 
+
+  .heading-michal {
+    position: absolute;
+    bottom: 0;
+    line-height: 0.68;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #536260;
+    width: 100%;
+    text-align: center;
+  }
+
+  
+}

@@ -1,0 +1,436 @@
+$header1: 9rem;
+$header2: 3rem;
+$header3: 2.5rem;
+$text: 2.2rem;
+$headings: 8rem;
+$headings-small: 4rem;
+
+@import "globals";
+@import "intro";
+@import "hero";
+@import "occupation";
+@import "michal";
+@import "reference";
+@import "media";
+@import "contact";
+@import "footer";
+@media screen and (max-width: 1214px) {
+  //INTRO SECTION
+  #intro {
+    .nav-links {
+      width: 60%;
+    }
+  }
+
+  //OCCUPATION SECTION
+  #occupation {
+    .occupation-text {
+      padding-top: 2rem;
+      p {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  //MICHAL SECTION
+  #michal {
+    p {
+      padding-bottom: 6rem;
+    }
+  }
+
+  //MEDIA SECTION
+  #media {
+    .media-wrapper {
+      width: 90%;
+      .media-content {
+        width: 30%;
+      }
+    }
+  }
+
+  //REFERENCE SECTION
+  #reference {
+    .reference-wrapper {
+      .review {
+        min-width: 25%;
+        p {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  //CONTACT SECTION
+  #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    margin-top: 6rem;
+    .contact-info {
+      width: 90%;
+      margin-bottom: 3rem;
+
+      .info {
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+    .form-wrapper{
+      width: 90%;
+      align-items: left;
+      .contact-form{
+        
+        textarea{
+          width: 60vw;
+        }
+        
+      }
+    }
+  }
+
+
+
+  //FOOTER
+  #footer {
+    .footer-wrapper {
+      .about {
+        width: 15%;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      a,
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1086px) {
+  //INTRO SECTION
+  #intro {
+    position: relative;
+    img {
+      display: none;
+    }
+    .burger {
+      display: block;
+      position: absolute;
+      top: 3%;
+      right: 5%;
+    }
+    .nav-links {
+      display: none;
+      width: 100vw;
+      background-color: white;
+      text-align: center;
+      height: 40vh;
+      padding: 0;
+      .dropdown{
+        justify-content: center;
+        i{
+          display: none;
+        }
+      }
+      li {
+        padding: 2rem 0;
+        border-bottom: black solid 1px;
+        background-color: white;
+      }
+      li:hover {
+        background-color: #f8f8f8;
+      }
+    
+      .media-icons{
+        display: none;
+      }
+    }
+  }
+
+  //OCCUPATION SCTION
+  #occupation {
+    .occupation-text {
+      padding-top: 0rem;
+      p {
+        font-size: 1.7rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  //MEDIA SECTION
+  #media {
+    .media-wrapper {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 871px) {
+  // INTRO SECTION
+  #intro {
+    .intro-text-wrapper {
+      .intro-text {
+        h2 {
+          font-size: 3.5rem;
+        }
+        p {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+  //HERO SECTION
+  #hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 7rem;
+    .hero-descp {
+      padding: 2rem 0;
+    }
+    .portrait {
+      height: 200px;
+      width: 200px;
+    }
+  }
+  .heading-activities,
+  .heading-michal,
+  .heading-reference,
+  .heading-media,
+  .heading-contact {
+    font-size: $headings;
+  }
+
+  //OCCUPATION SECTION
+  #occupation {
+    .occupation-div {
+      padding-top: 2rem;
+      display: block;
+      .picture {
+        display: flex;
+        justify-content: center;
+        img {
+          margin: 0;
+        }
+      }
+      .right {
+        display: none;
+      }
+      .occupation-text {
+        text-align: center;
+        width: 90%;
+        margin: auto;
+      }
+    }
+  }
+  //MEDIA SECTION
+  #media {
+    .media-wrapper {
+      flex-direction: column;
+      align-items: center;
+      padding: 8rem 0rem;
+      .media-content {
+        width: 70%;
+        margin: 2rem 0rem;
+      }
+    }
+  }
+
+  //REFERENCE SECTION
+  #reference {
+    .reference-wrapper {
+      flex-direction: column;
+      .big{
+        transform: scale(1);
+      }
+      .review{
+        text-align: center;
+        width: 60%;
+        margin-top: 3rem;
+      }
+    }
+    padding-bottom: 10rem;
+  }
+
+  //CONTACT SECTION
+  #contact{
+    .contact-info{
+      width: 100vw;
+      .info{
+        width: 90%;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 1rem;
+      }
+    }
+    .form-wrapper{
+      align-items: center;
+      margin-bottom: 4rem;
+      .contact-form{
+        align-items: center;
+        input{
+          width: 80vw;
+        }
+        textarea{
+          width: 80vw;
+        }
+        
+      }
+      .send{
+        margin-top: 4rem;
+      }
+    }
+    
+  }
+  //FOOTER
+  #footer {
+    padding-bottom: 6rem;
+    .footer-wrapper {
+      width: 80%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      .sitemap,
+      .activity,
+      .contact,
+      .about,
+      .personal {
+        align-items: center;
+        justify-content: center;
+      }
+      h2 {
+        margin: 4rem 0rem 0rem 0rem;
+      }
+      .about {
+        width: 100%;
+        text-align: center;
+      }
+      .personal {
+        grid-column: span 2;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 546px) {
+  p {
+    font-size: 2rem;
+  }
+  // INTRO SECTION
+
+  #intro {
+    .intro-text-wrapper {
+      .intro-text {
+        width: 80%;
+        h2 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  .heading-activities,
+  .heading-michal,
+  .heading-reference,
+  .heading-media,
+  .heading-contact {
+    font-size: $headings-small;
+  }
+  //CONTACT SECTION
+  #contact {
+    margin-top: 1rem;
+    .contact-info {
+      width: 100vw;
+      margin: 0;
+      .email {
+        margin: 2rem 0;
+      }
+      .info {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  .form {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  //FOOTER SECTION 
+  #footer {
+    .footer-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  // OCCUPATION SECTION
+  #occupation {
+    .programs-balance,
+    .programs-learning,
+    .programs-beginner {
+      text-align: center;
+      ul {
+        li {
+          text-align: left;
+        }
+      }
+      p,
+      li {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 3rem;
+      }
+    }
+  }
+  #media {
+    .media-wrapper {
+      .media-content {
+        width: 90%;
+      }
+    }
+  }
+
+  //REFERENCE SECTION
+  #reference{
+    .reference-wrapper{
+      .review{
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1461px) {
+  #contact {
+    .info {
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

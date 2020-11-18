@@ -1,0 +1,26 @@
+#michal {
+  min-height: 100vh;
+  background-image: url("/photos/mediabg.png");
+  background-size: cover;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 5rem;
+  .media-text {
+    width: 60%;
+    margin: auto;
+    color: white;
+    p,
+    h2 {
+      margin: 3rem 0rem;
+    }
+  }
+  .heading-reference {
+    position: absolute;
+    bottom: 0;
+    line-height: 0.68;
+    color: #f8f8f8;
+  }
+}
