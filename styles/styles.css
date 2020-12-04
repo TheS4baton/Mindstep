@@ -110,6 +110,10 @@ i {
   height: 10vh;
 }
 
+#intro .nav-links a {
+  font-weight: 700;
+}
+
 #intro .scroller {
   position: absolute;
   bottom: 4rem;

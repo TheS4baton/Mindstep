@@ -5,7 +5,6 @@
   position: relative;
   .burger {
     display: none;
-    
   }
   nav {
     display: flex;
@@ -21,6 +20,9 @@
     padding: 4rem;
     position: relative;
     height: 10vh;
+    a {
+      font-weight: 700;
+    }
   }
 
   .scroller {
@@ -32,23 +34,23 @@
     color: black;
     animation: animation 1.5s infinite alternate;
   }
-  .intro-text-wrapper{
+  .intro-text-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 90vh;
-    .intro-text{
+    .intro-text {
       width: 60%;
       margin: auto;
       color: white;
-      h2{
+      h2 {
         margin: 2rem 0rem;
         font-size: 4rem;
       }
-      p{
+      p {
         font-size: 3rem;
       }
-      .more{
+      .more {
         border: none;
         background-color: #ffffff;
         padding: 1rem 2.5rem;
@@ -58,60 +60,56 @@
         cursor: pointer;
       }
     }
-    
   }
-  .whatsapp{
+  .whatsapp {
     position: fixed;
     bottom: 5%;
     right: 5%;
-    z-index:2;
+    z-index: 2;
     font-size: 5rem;
     color: green;
   }
-  .fb{
+  .fb {
     margin-right: 1rem;
   }
 
   //DROPDOWN
-  .dropdown{
+  .dropdown {
     height: 9vh;
     display: flex;
     align-items: center;
-    i{
+    i {
       color: white;
       font-size: 1.5rem;
-      padding: 0.5rem 0 0 1rem
+      padding: 0.5rem 0 0 1rem;
     }
   }
-  
-  .content{
-    display: flex;  
+
+  .content {
+    display: flex;
     flex-direction: column;
     width: 350px;
     position: absolute;
     top: 90%;
     background-color: white;
-    .arrow-dropdown{
+    .arrow-dropdown {
       color: black;
       font-size: 1.5rem;
       position: absolute;
       right: 5%;
       padding-top: 0.6rem;
     }
-    a{
+    a {
       font-weight: 400;
       font-size: 2rem;
       padding: 1rem 2rem;
     }
-    a:hover{
+    a:hover {
       background-color: #fafafa;
     }
-
   }
- 
-  .burger-black{
+
+  .burger-black {
     color: black;
   }
-
 }
-
