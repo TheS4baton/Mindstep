@@ -1,17 +1,29 @@
 #michal {
   min-height: 100vh;
-  background-image: url("/photos/mediabg.png");
-  background-size: cover;
-  opacity: 0.8;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-bottom: 5rem;
+  padding-bottom: 15rem;
+  padding-top: 8rem;
+
+  .bg-wrap {
+    background-image: url("/photos/mediabg.png");
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    filter: brightness(0.5);
+  }
+
   .media-text {
     width: 60%;
     margin: auto;
     color: white;
+    filter: brightness();
+
     p,
     h2 {
       margin: 3rem 0rem;
@@ -20,7 +32,7 @@
   .heading-reference {
     position: absolute;
     bottom: 0;
-    line-height: 0.68;
+    line-height: 0.75;
     color: #f8f8f8;
   }
 }

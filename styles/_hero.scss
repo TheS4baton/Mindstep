@@ -1,34 +1,35 @@
-#hero{
-    min-height: 50vh;
-    width: 80%;
-    margin: auto;
-    display: flex;
-    padding-top: 5rem;
-    position: relative;
-    .hero-descp{
-        height: 80%;
-        width: 80%;
-        padding-left: 5rem;
-        .quote{
-            font-size: $text;
-            margin: 6rem 0;
-        }
+#hero {
+  min-height: 60vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 15rem;
+  
+  .hero-descp {
+    padding-left: 5rem;
+    .quote {
+      font-size: $text;
+      margin: 6rem 0;
     }
-    .quote-name{
-        font-weight: 600;
-        font-size: $text;
-        margin-left: 2rem;
-    }
-    .portrait{
-        border-radius: 50%;
-        max-height: 200px;
-    }
-    .heading-activities{
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%,0);
-        line-height: 0.8;
-        color: #f8f8f8;
-    }
+  }
+  .quote-name {
+    font-weight: 600;
+    font-size: $text;
+    margin-left: 2rem;
+  }
+  .portrait {
+    border-radius: 50%;
+    max-height: 200px;
+  }
+  .heading-activities {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    line-height: 0.8;
+    color: #f8f8f8;
+  }
 }

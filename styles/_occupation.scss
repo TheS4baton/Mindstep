@@ -64,6 +64,7 @@
       }
     }
   }
+  
   .programs-all{
     overflow: hidden;
     position: relative;
@@ -139,9 +140,9 @@
   .heading-michal {
     position: absolute;
     bottom: 0;
-    line-height: 0.68;
+    line-height: 0.4;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
     color: #536260;
     width: 100%;
     text-align: center;

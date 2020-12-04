@@ -1,10 +1,18 @@
 #media {
   min-height: 80vh;
-  opacity: 0.8;
-  background-image: url("/photos/mediabg.png");
-  background-size: cover;
   position: relative;
   display: flex;
+  .bg-media {
+    background-image: url("/photos/mediabg.png");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    filter: brightness(0.5);
+  }
   .media-wrapper {
     display: flex;
     justify-content: space-around;
@@ -25,6 +33,7 @@
     width: 30%;
     position: relative;
     padding-bottom: 5rem;
+    color: white;
     p {
       line-height: 1.5;
     }

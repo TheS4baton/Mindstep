@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 
 html {
@@ -22,6 +24,12 @@ h3 {
   font-size: 2.5rem;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
 a,
 li {
   font-size: 2.2rem;
@@ -30,10 +38,12 @@ li {
   outline: none;
   cursor: pointer;
   text-decoration: none;
+  font-weight: 400;
 }
 
 p {
   font-size: 2.2rem;
+  font-weight: 400;
 }
 
 ul {
@@ -216,19 +226,23 @@ i {
 }
 
 #hero {
-  min-height: 50vh;
+  min-height: 60vh;
   width: 80%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
+  padding-bottom: 15rem;
 }
 
 #hero .hero-descp {
-  height: 80%;
-  width: 80%;
   padding-left: 5rem;
 }
 
@@ -437,10 +451,10 @@ i {
 #occupation .heading-michal {
   position: absolute;
   bottom: 0;
-  line-height: 0.68;
+  line-height: 0.4;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #536260;
   width: 100%;
   text-align: center;
@@ -448,9 +462,6 @@ i {
 
 #michal {
   min-height: 100vh;
-  background-image: url("/photos/mediabg.png");
-  background-size: cover;
-  opacity: 0.8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -461,13 +472,28 @@ i {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  padding-bottom: 5rem;
+  padding-bottom: 15rem;
+  padding-top: 8rem;
+}
+
+#michal .bg-wrap {
+  background-image: url("/photos/mediabg.png");
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
 }
 
 #michal .media-text {
   width: 60%;
   margin: auto;
   color: white;
+  -webkit-filter: brightness();
+          filter: brightness();
 }
 
 #michal .media-text p,
@@ -478,7 +504,7 @@ i {
 #michal .heading-reference {
   position: absolute;
   bottom: 0;
-  line-height: 0.68;
+  line-height: 0.75;
   color: #f8f8f8;
 }
 
@@ -534,13 +560,23 @@ i {
 
 #media {
   min-height: 80vh;
-  opacity: 0.8;
-  background-image: url("/photos/mediabg.png");
-  background-size: cover;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+#media .bg-media {
+  background-image: url("/photos/mediabg.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
 }
 
 #media .media-wrapper {
@@ -575,6 +611,7 @@ i {
   width: 30%;
   position: relative;
   padding-bottom: 5rem;
+  color: white;
 }
 
 #media .media-content p {
@@ -664,6 +701,12 @@ i {
   margin-top: 5rem;
 }
 
+#contact .form-wrapper .email-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 #contact .form-wrapper .contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -679,7 +722,20 @@ i {
   margin-top: 2rem;
   border: none;
   background-color: #f8f8f8;
-  width: 50%;
+  width: 45%;
+}
+
+#contact .form-wrapper .contact-form .email-input {
+  margin-left: 1rem;
+  max-width: 70%;
+}
+
+#contact .form-wrapper .contact-form .email-input input {
+  min-width: 50%;
+}
+
+#contact .form-wrapper .contact-form .name-input {
+  width: calc(50%-1rem);
 }
 
 #contact .form-wrapper .contact-form textarea {
@@ -721,6 +777,8 @@ i {
           align-items: flex-start;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-top: 8rem;
+  margin-bottom: 1rem;
 }
 
 #footer .footer-wrapper .sitemap,
@@ -746,6 +804,7 @@ i {
 #footer .footer-wrapper .about h2,
 #footer .footer-wrapper .personal h2 {
   margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
 #footer .footer-wrapper .socials {
@@ -765,10 +824,13 @@ i {
 
 #footer .footer-wrapper .about p {
   margin-top: 1.5rem;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 #footer a {
   color: white;
+  font-size: 2rem;
   font-weight: 400;
   margin-top: 1.5rem;
 }
@@ -835,6 +897,15 @@ i {
   }
   #contact .form-wrapper .contact-form textarea {
     width: 60vw;
+  }
+  #contact .form-wrapper .contact-form .email-phone {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact .form-wrapper .contact-form .email-input {
+    margin-left: 0;
   }
   #footer .footer-wrapper .about {
     width: 15%;
@@ -957,6 +1028,9 @@ i {
     width: 90%;
     margin: auto;
   }
+  #media {
+    padding-bottom: 5rem;
+  }
   #media .media-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -975,6 +1049,7 @@ i {
     padding-bottom: 10rem;
   }
   #reference .reference-wrapper {
+    padding: 8rem 0rem 8rem 0rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -996,7 +1071,7 @@ i {
     width: 90%;
     text-align: center;
     margin: auto;
-    padding-bottom: 1rem;
+    padding-bottom: 5rem;
   }
   #contact .form-wrapper {
     -webkit-box-align: center;
@@ -1014,6 +1089,9 @@ i {
   }
   #contact .form-wrapper .contact-form textarea {
     width: 80vw;
+  }
+  #contact .form-wrapper .contact-form .email-input {
+    max-width: 100%;
   }
   #contact .form-wrapper .send {
     margin-top: 4rem;
@@ -1082,6 +1160,7 @@ i {
   #contact .contact-info {
     width: 100vw;
     margin: 0;
+    padding: 5rem 0;
   }
   #contact .contact-info .email {
     margin: 2rem 0;

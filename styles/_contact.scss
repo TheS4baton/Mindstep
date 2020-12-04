@@ -10,7 +10,6 @@
   }
   .contact-info {
     display: flex;
-
     flex-direction: column;
     min-width: 50%;
     margin-bottom: 10rem;
@@ -30,6 +29,9 @@
     flex-direction: column;
     margin-bottom: 10rem;
     margin-top: 5rem;
+    .email-phone{
+      display: flex;
+    }
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -38,8 +40,22 @@
         margin-top: 2rem;
         border: none;
         background-color: #f8f8f8;
-        width: 50%;
+        width: 45%;
+        
       }
+      .email-input{
+        margin-left: 1rem;
+        max-width: 70%;
+        input{
+          min-width: 50%;
+        }
+        
+
+      }
+      .name-input{
+        width: calc(50%-1rem);
+      }
+      
       textarea {
         border: none;
         background-color: #f8f8f8;

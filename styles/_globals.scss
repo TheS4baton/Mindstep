@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  
 }
 html {
   font-size: 62.5%;
@@ -16,6 +18,13 @@ h2 {
 h3 {
   font-size: $header3;
 }
+
+h1,
+h2,
+h3{
+  font-weight: 700;
+}
+
 a,
 li {
   font-size: $text;
@@ -24,9 +33,11 @@ li {
   outline: none;
   cursor: pointer;
   text-decoration: none;
+  font-weight: 400;
 }
 p {
   font-size: $text;
+  font-weight: 400;
 }
 ul {
   list-style: none;
@@ -37,6 +48,8 @@ i {
   color: white;
   cursor: pointer;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 @keyframes animation {
   from {
