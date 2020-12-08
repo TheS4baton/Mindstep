@@ -17,7 +17,10 @@
       display: flex;
       width: 90%;
       justify-content: space-between;
-      margin-bottom: 2rem;
+      margin-bottom: 5rem;
+      p{
+        line-height: 3.5rem;
+      }
     }
     .map {
       max-height: 80%;

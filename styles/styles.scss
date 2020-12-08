@@ -1,5 +1,5 @@
 $header1: 9rem;
-$header2: 3rem;
+$header2:3rem;
 $header3: 2.5rem;
 $text: 2.2rem;
 $headings: 8rem;
@@ -34,6 +34,7 @@ $headings-small: 4rem;
       }
     }
   }
+
 
   //MICHAL SECTION
   #michal {
@@ -123,6 +124,7 @@ $headings-small: 4rem;
 }
 
 @media screen and (max-width: 1086px) {
+
   //INTRO SECTION
   #intro {
     position: relative;
@@ -131,17 +133,26 @@ $headings-small: 4rem;
     }
     .burger {
       display: block;
-      position: absolute;
+      position: fixed;
       top: 3%;
       right: 5%;
+      z-index: 99;
     }
+    .burger-icon{
+      color: black;
+    }
+    
     .nav-links {
+      position: fixed;
       display: none;
+      flex-direction: column;
       width: 100vw;
       background-color: white;
       text-align: center;
-      height: 40vh;
-      padding: 0;
+      height: 100vh;
+      padding: 8rem 0;
+      
+      z-index: 99;
       .dropdown{
         justify-content: center;
         i{
@@ -150,7 +161,6 @@ $headings-small: 4rem;
       }
       li {
         padding: 2rem 0;
-        border-bottom: black solid 1px;
         background-color: white;
       }
       li:hover {
@@ -189,6 +199,7 @@ $headings-small: 4rem;
   #intro {
     .intro-text-wrapper {
       .intro-text {
+        text-align: center;
         h2 {
           font-size: 3.5rem;
         }
@@ -203,7 +214,7 @@ $headings-small: 4rem;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-bottom: 7rem;
+    padding: 7rem 0 15rem;
     .hero-descp {
       padding: 2rem 0;
     }
@@ -223,7 +234,7 @@ $headings-small: 4rem;
   //OCCUPATION SECTION
   #occupation {
     .occupation-div {
-      padding-top: 2rem;
+      padding-top: 6rem;
       display: block;
       .picture {
         display: flex;
@@ -237,9 +248,21 @@ $headings-small: 4rem;
       }
       .occupation-text {
         text-align: center;
-        width: 90%;
+        width: 80%;
         margin: auto;
       }
+      .trainer{
+        border: 5px solid #cc772b;
+
+      }
+    }
+  }
+  //MICHAL SECTION
+
+  #michal{
+    .media-text{
+      text-align: center;
+      
     }
   }
   //MEDIA SECTION
@@ -250,8 +273,8 @@ $headings-small: 4rem;
       align-items: center;
       padding: 8rem 0rem;
       .media-content {
-        width: 70%;
-        margin: 2rem 0rem;
+        width: 80%;
+        margin: 6rem 0rem;
       }
     }
   }
@@ -267,8 +290,8 @@ $headings-small: 4rem;
       }
       .review{
         text-align: center;
-        width: 60%;
-        margin-top: 3rem;
+        width: 80%;
+        margin-top: 8rem;
       }
     }
     padding-bottom: 10rem;
@@ -277,14 +300,15 @@ $headings-small: 4rem;
   //CONTACT SECTION
   #contact{
     .contact-info{
-      width: 100vw;
+      width: 100%;
       .info{
-        width: 90%;
+        width: 100%;
         text-align: center;
         margin: auto;
         padding-bottom: 5rem;
       }
     }
+    
     .form-wrapper{
       align-items: center;
       margin-bottom: 4rem;
@@ -348,13 +372,19 @@ $headings-small: 4rem;
     .intro-text-wrapper {
       .intro-text {
         width: 80%;
+        text-align: center;
         h2 {
           font-size: 3rem;
         }
         p {
           font-size: 2rem;
+          margin-bottom: 4rem;
         }
       }
+    }
+    .intro-arrow-right,
+    .intro-arrow-left{
+      font-size: 3.5rem;
     }
   }
   .heading-activities,
@@ -368,9 +398,10 @@ $headings-small: 4rem;
   #contact {
     margin-top: 1rem;
     .contact-info {
-      width: 100vw;
+      width: 100%;
       margin: 0;
       padding: 5rem 0;
+      
       .email {
         margin: 2rem 0;
       }
@@ -388,6 +419,12 @@ $headings-small: 4rem;
   .form {
     h1 {
       font-size: 2rem;
+    }
+  }
+  //MICHAL SECTION
+  #michal{
+    .media-text{
+      width: 80%;
     }
   }
 

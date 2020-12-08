@@ -15,6 +15,14 @@
   </head>
   <body>
     <section id="intro">
+      <i onclick="introPlusSlides(1)" class="fas fa-chevron-right intro-arrow-right"></i>
+      <i onclick="introPlusSlides(-1)" class="fas fa-chevron-left intro-arrow-left"></i>
+      <div class="intro-first mySlides">
+      </div>
+      <div class="intro-second mySlides">
+      </div>
+      <div class="intro-third mySlides">
+      </div>
       <header class="main-head">
         <nav>
           <img src="/photos/mindstep-logo.png" alt="" />
@@ -47,8 +55,9 @@
         <div class="intro-text">
         <h2>Mentálny tréning a psychologická príprava športovcov</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem a eligendi iusto quas expedita ad aperiam nulla ab eius et!</p>
-        <button class="more">Zisti viac</button>
-      </div></div>
+        <a href = "#occupation"class="more">Zisti viac</a>
+      </div>
+    </div>
       
     </section>
     <section id="hero">
@@ -86,7 +95,7 @@
               Podpora a príprava vrcholových aj hobby športovcov pri dosahovaní
               výkonov
             </p>
-            <button class="programs" onclick="occupationSlides(this)">
+            <button class="programs btn-hov" onclick="occupationSlides(this)">
               Programy <i class="fas fa-chevron-down down"></i>
             </button>
           </div>
@@ -275,7 +284,7 @@
         
         <div id ="training" class="occupation-div training transition">
           <div class="picture mobile">
-            <img class="left" src="/photos/export trainer.png" alt="" />
+            <img class="left trainer" src="/photos/export trainer.png" alt="" />
           </div>
           <div class="occupation-text">
             <h2>Vzdelávanie pre trénerov, rodičov a vzdelávanie klubov</h2>
@@ -284,7 +293,7 @@
               Rozvoj dôležitých zručností v oblasti psychológie športu pre
               okolie športovca
             </p>
-            <button class="programs-second" onclick="occupationSlides(this)">
+            <button class="programs-second btn-hov" onclick="occupationSlides(this)">
               Programy <i class="fas fa-chevron-down down"></i>
             </button>
           </div>
@@ -363,7 +372,7 @@
         </div>
 
         <div id ="balance" class="occupation-div balance-bg transition">
-          <div class="occupation-div ">
+          
             <div class="picture">
               <img class="left balance" src="/photos/export work.png" alt="" />
             </div>
@@ -371,14 +380,14 @@
               <h2>Work in Balance - Life koučing, vyhorenie a stress</h2>
 
               <p>
-                sprevádzanie ťažkými situáciami v živote aj práci, nastavenie
+                Sprevádzanie ťažkými situáciami v živote aj práci, nastavenie
                 rovnováhy v živote aj v práci
               </p>
-              <button class="programs-third" onclick = "occupationSlides(this)">
+              <button class="programs-third btn-hov" onclick = "occupationSlides(this)">
                 Programy <i class="fas fa-chevron-down down"></i>
               </button>
             </div>
-          </div>
+        
           <h1 class="heading-michal">O MNE</h1>
         </div>
         <div class="programs-all">
@@ -526,7 +535,7 @@
       <div class="bg-media">
 
       </div>
-      <div class="media-wrapper">
+    <div class="media-wrapper">
       <div class="media-content">
         <div class = "media-image"> </div>
           <h2>Denník N</h2>
@@ -653,9 +662,16 @@
           $(".burger").click(function () {
           $(".nav-links").slideToggle();
           $(".burger-icon").toggleClass("burger-black");
+          $(".nav-links").css("display", "flex");
+
           });
       });
-      } 
+      }
+      $('.nav-links>li>a').on('click', function(){
+        $(".burger-icon").toggleClass("burger-black");
+
+    $('.nav-links').slideToggle();
+  });
       }
       
       $(".dot").hide();
@@ -713,9 +729,27 @@
 
       
 
-     
+//INTRO SLIDER
+var introSlideIndex = 1;
+introSlider(introSlideIndex);
 
-//SLIDER
+function introPlusSlides(n) {
+  introSlider(introSlideIndex += n);
+}
+
+function introSlider(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {introSlideIndex = 1}    
+  if (n < 1) {introSlideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+
+  slides[introSlideIndex-1].style.display = "block";  
+}
+
+//OCCUPATION SLIDER
 
 function plusSlides(n,id) {
   showSlides(slideIndex += n, id);
@@ -726,8 +760,6 @@ function currentSlide(n,id) {
   console.log(this.id);
   showSlides(slideIndex = n, id);
 }
-
-
 
 function showSlides(n,slidedDivs) {
   var d;
@@ -767,12 +799,10 @@ $(".content").hide();
 if(window.outerWidth > 1081) {
 $(document).ready(function () {
     $(".dropdown").hover(function () {
-     $(this).find('.content').slideToggle();
+     $(this).find('.content').fadeToggle();
     });
 });
 } 
-
-
     </script>
   </body>
 </html>

@@ -1,10 +1,42 @@
 #intro {
   height: 100vh;
-  background-image: url("/photos/intro.jpeg");
   background-size: cover;
   position: relative;
+  .intro-first,
+  .intro-second,
+  .intro-third {
+    background-image: url("/photos/intro.jpeg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    filter: brightness(0.8);
+    z-index: -1;
+  }
+  .intro-second {
+    background-image: url("/photos/landing-slideshow-2.jpeg");
+  }
+  .intro-third {
+    background-image: url("/photos/landing-slideshow-3.jpeg");
+  }
   .burger {
     display: none;
+  }
+  .intro-arrow-left,
+  .intro-arrow-right {
+    position: absolute;
+    top: 50%;
+    font-size: 4rem;
+    transform: translate(0, -50%);
+  }
+  .intro-arrow-left {
+    left: 2%;
+  }
+  .intro-arrow-right {
+    right: 2%;
   }
   nav {
     display: flex;
@@ -31,7 +63,7 @@
     left: 50%;
     transform: translate(-50%, 50%);
     font-size: 4rem;
-    color: black;
+    color: white;
     animation: animation 1.5s infinite alternate;
   }
   .intro-text-wrapper {
@@ -44,19 +76,20 @@
       margin: auto;
       color: white;
       h2 {
-        margin: 2rem 0rem;
-        font-size: 4rem;
+        margin: 1rem 0rem;
+        font-size: 3.5rem;
       }
       p {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        line-height: 3.125rem;
+        margin-bottom: 2rem;
       }
       .more {
-        border: none;
         background-color: #ffffff;
-        padding: 1rem 2.5rem;
+        padding: 1rem 2rem;
         color: black;
-        margin-top: 2rem;
         font-weight: 600;
+        font-size: 1.5rem;
         cursor: pointer;
       }
     }
@@ -111,5 +144,6 @@
 
   .burger-black {
     color: black;
+    z-index: 100;
   }
 }

@@ -77,13 +77,53 @@ i {
 
 #intro {
   height: 100vh;
-  background-image: url("/photos/intro.jpeg");
   background-size: cover;
   position: relative;
 }
 
+#intro .intro-first,
+#intro .intro-second,
+#intro .intro-third {
+  background-image: url("/photos/intro.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+  z-index: -1;
+}
+
+#intro .intro-second {
+  background-image: url("/photos/landing-slideshow-2.jpeg");
+}
+
+#intro .intro-third {
+  background-image: url("/photos/landing-slideshow-3.jpeg");
+}
+
 #intro .burger {
   display: none;
+}
+
+#intro .intro-arrow-left,
+#intro .intro-arrow-right {
+  position: absolute;
+  top: 50%;
+  font-size: 4rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+#intro .intro-arrow-left {
+  left: 2%;
+}
+
+#intro .intro-arrow-right {
+  right: 2%;
 }
 
 #intro nav {
@@ -121,7 +161,7 @@ i {
   -webkit-transform: translate(-50%, 50%);
           transform: translate(-50%, 50%);
   font-size: 4rem;
-  color: black;
+  color: white;
   -webkit-animation: animation 1.5s infinite alternate;
           animation: animation 1.5s infinite alternate;
 }
@@ -146,21 +186,22 @@ i {
 }
 
 #intro .intro-text-wrapper .intro-text h2 {
-  margin: 2rem 0rem;
-  font-size: 4rem;
+  margin: 1rem 0rem;
+  font-size: 3.5rem;
 }
 
 #intro .intro-text-wrapper .intro-text p {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  line-height: 3.125rem;
+  margin-bottom: 2rem;
 }
 
 #intro .intro-text-wrapper .intro-text .more {
-  border: none;
   background-color: #ffffff;
-  padding: 1rem 2.5rem;
+  padding: 1rem 2rem;
   color: black;
-  margin-top: 2rem;
   font-weight: 600;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
@@ -227,10 +268,11 @@ i {
 
 #intro .burger-black {
   color: black;
+  z-index: 100;
 }
 
 #hero {
-  min-height: 60vh;
+  min-height: 70vh;
   width: 80%;
   margin: auto;
   display: -webkit-box;
@@ -243,7 +285,6 @@ i {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  padding-bottom: 15rem;
 }
 
 #hero .hero-descp {
@@ -263,7 +304,7 @@ i {
 
 #hero .portrait {
   border-radius: 50%;
-  max-height: 200px;
+  max-height: 230px;
 }
 
 #hero .heading-activities {
@@ -272,8 +313,8 @@ i {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  line-height: 0.8;
-  color: #f8f8f8;
+  line-height: 0.78;
+  color: #e2dddd;
 }
 
 #occupation {
@@ -294,7 +335,7 @@ i {
 }
 
 #occupation .occupation-div {
-  padding: 3rem 0;
+  padding: 10rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,11 +368,11 @@ i {
 }
 
 #occupation .occupation-div .left {
-  margin-right: 4rem;
+  margin-right: 8rem;
 }
 
 #occupation .occupation-div .right {
-  margin-left: 4rem;
+  margin-left: 8rem;
 }
 
 #occupation .occupation-div .occupation-text {
@@ -353,6 +394,7 @@ i {
   border: none;
   padding: 1rem 2rem;
   margin-top: 4rem;
+  outline: none;
   cursor: pointer;
 }
 
@@ -361,6 +403,10 @@ i {
 #occupation .occupation-div .programs .down {
   font-size: 1.2rem;
   margin-left: 1rem;
+}
+
+#occupation .occupation-div .btn-hov:hover {
+  background-color: #d3cfcf;
 }
 
 #occupation .programs-all {
@@ -455,7 +501,7 @@ i {
 #occupation .heading-michal {
   position: absolute;
   bottom: 0;
-  line-height: 0.4;
+  line-height: 0.39;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -476,7 +522,7 @@ i {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  padding-bottom: 15rem;
+  padding-bottom: 18rem;
   padding-top: 8rem;
 }
 
@@ -493,7 +539,7 @@ i {
 }
 
 #michal .media-text {
-  width: 60%;
+  width: 80%;
   margin: auto;
   color: white;
   -webkit-filter: brightness();
@@ -503,6 +549,7 @@ i {
 #michal .media-text p,
 #michal .media-text h2 {
   margin: 3rem 0rem;
+  line-height: 45.2px;
 }
 
 #michal .heading-reference {
@@ -514,6 +561,7 @@ i {
 
 #reference {
   position: relative;
+  padding-bottom: 3rem;
 }
 
 #reference .reference-wrapper {
@@ -527,6 +575,14 @@ i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+#reference p {
+  font-size: 2rem;
+}
+
+#reference h2 {
+  font-size: 2.5rem;
 }
 
 #reference .heading-media {
@@ -568,10 +624,11 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-bottom: 5rem;
 }
 
 #media .bg-media {
-  background-image: url("/photos/mediabg.png");
+  background-image: url("/photos/media.jpeg");
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -686,7 +743,11 @@ i {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
+}
+
+#contact .contact-info .info p {
+  line-height: 3.5rem;
 }
 
 #contact .contact-info .map {
@@ -827,16 +888,17 @@ i {
 }
 
 #footer .footer-wrapper .about p {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   font-size: 2rem;
   font-weight: 400;
+  line-height: 3rem;
 }
 
 #footer a {
   color: white;
   font-size: 2rem;
   font-weight: 400;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 1214px) {
@@ -932,17 +994,27 @@ i {
   }
   #intro .burger {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 3%;
     right: 5%;
+    z-index: 99;
+  }
+  #intro .burger-icon {
+    color: black;
   }
   #intro .nav-links {
+    position: fixed;
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100vw;
     background-color: white;
     text-align: center;
-    height: 40vh;
-    padding: 0;
+    height: 100vh;
+    padding: 8rem 0;
+    z-index: 99;
   }
   #intro .nav-links .dropdown {
     -webkit-box-pack: center;
@@ -954,7 +1026,6 @@ i {
   }
   #intro .nav-links li {
     padding: 2rem 0;
-    border-bottom: black solid 1px;
     background-color: white;
   }
   #intro .nav-links li:hover {
@@ -978,6 +1049,9 @@ i {
 }
 
 @media screen and (max-width: 871px) {
+  #intro .intro-text-wrapper .intro-text {
+    text-align: center;
+  }
   #intro .intro-text-wrapper .intro-text h2 {
     font-size: 3.5rem;
   }
@@ -993,7 +1067,7 @@ i {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    padding-bottom: 7rem;
+    padding: 7rem 0 15rem;
   }
   #hero .hero-descp {
     padding: 2rem 0;
@@ -1010,7 +1084,7 @@ i {
     font-size: 8rem;
   }
   #occupation .occupation-div {
-    padding-top: 2rem;
+    padding-top: 6rem;
     display: block;
   }
   #occupation .occupation-div .picture {
@@ -1029,8 +1103,14 @@ i {
   }
   #occupation .occupation-div .occupation-text {
     text-align: center;
-    width: 90%;
+    width: 80%;
     margin: auto;
+  }
+  #occupation .occupation-div .trainer {
+    border: 5px solid #cc772b;
+  }
+  #michal .media-text {
+    text-align: center;
   }
   #media {
     padding-bottom: 5rem;
@@ -1046,8 +1126,8 @@ i {
     padding: 8rem 0rem;
   }
   #media .media-wrapper .media-content {
-    width: 70%;
-    margin: 2rem 0rem;
+    width: 80%;
+    margin: 6rem 0rem;
   }
   #reference {
     padding-bottom: 10rem;
@@ -1065,14 +1145,14 @@ i {
   }
   #reference .reference-wrapper .review {
     text-align: center;
-    width: 60%;
-    margin-top: 3rem;
+    width: 80%;
+    margin-top: 8rem;
   }
   #contact .contact-info {
-    width: 100vw;
+    width: 100%;
   }
   #contact .contact-info .info {
-    width: 90%;
+    width: 100%;
     text-align: center;
     margin: auto;
     padding-bottom: 5rem;
@@ -1144,12 +1224,18 @@ i {
   }
   #intro .intro-text-wrapper .intro-text {
     width: 80%;
+    text-align: center;
   }
   #intro .intro-text-wrapper .intro-text h2 {
     font-size: 3rem;
   }
   #intro .intro-text-wrapper .intro-text p {
     font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+  #intro .intro-arrow-right,
+  #intro .intro-arrow-left {
+    font-size: 3.5rem;
   }
   .heading-activities,
   .heading-michal,
@@ -1162,7 +1248,7 @@ i {
     margin-top: 1rem;
   }
   #contact .contact-info {
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 5rem 0;
   }
@@ -1180,6 +1266,9 @@ i {
   }
   .form h1 {
     font-size: 2rem;
+  }
+  #michal .media-text {
+    width: 80%;
   }
   #footer .footer-wrapper {
     display: -webkit-box;

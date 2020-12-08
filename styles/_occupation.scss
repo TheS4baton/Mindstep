@@ -11,7 +11,7 @@
     transition: .5s;
   }
   .occupation-div {
-    padding: 3rem 0;
+    padding: 10rem 0;
     display: flex;
     justify-content: center;
     
@@ -22,6 +22,7 @@
     }
     .training{
       background-color: #cc772b;
+      
     }
     .trainer{
       border-radius: 50%;
@@ -36,10 +37,10 @@
       height: 200px;
     }
     .left {
-      margin-right: 4rem;
+      margin-right: 8rem;
     }
     .right {
-      margin-left: 4rem;
+      margin-left: 8rem;
     }
     .occupation-text {
       padding-top: 3rem;
@@ -57,11 +58,15 @@
       border: none;
       padding: 1rem 2rem;
       margin-top: 4rem;
+      outline: none;
       cursor: pointer;
       .down {
         font-size: 1.2rem;
         margin-left: 1rem;
       }
+    }
+    .btn-hov:hover{
+      background-color: #d3cfcf;
     }
   }
   
@@ -140,7 +145,7 @@
   .heading-michal {
     position: absolute;
     bottom: 0;
-    line-height: 0.4;
+    line-height: 0.39;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #536260;

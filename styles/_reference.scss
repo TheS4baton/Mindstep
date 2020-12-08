@@ -1,12 +1,18 @@
 #reference{
     position: relative;
-    
+    padding-bottom: 3rem;
     .reference-wrapper{
         min-height: 80vh;
         display: flex;
         align-items: center;
         justify-content: center;
         
+    }
+    p{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 2.5rem;
     }
    
     .heading-media{
@@ -24,6 +30,7 @@
         background-color: #f8f8f8;
         padding: 4rem 2rem;
         position: relative;
+        
         .stars{
             margin:1rem 0 2rem 0;
         }
