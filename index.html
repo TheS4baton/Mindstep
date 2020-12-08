@@ -23,9 +23,15 @@
       </div>
       <div class="intro-third mySlides">
       </div>
+      <div class="logo-mb">
+        <img src="/photos/logo.png" alt="mindstep">
+      </div>
       <header class="main-head">
+        
         <nav>
-          <img src="/photos/mindstep-logo.png" alt="" />
+          <div class="logo">
+            <img src="/photos/logo.png" alt="">
+          </div>
           <ul id="nav-links" class="nav-links">
             <li class = "dropdown"> <a href="#occupation">Činnosti</a>  <i class="fas fa-chevron-down"></i>
               <div class="content">
@@ -55,10 +61,12 @@
         <div class="intro-text">
         <h2>Mentálny tréning a psychologická príprava športovcov</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem a eligendi iusto quas expedita ad aperiam nulla ab eius et!</p>
-        <a href = "#occupation"class="more">Zisti viac</a>
+        <a href = "#psychology"class="more myButtons">Zisti viac</a>
+        <a href = "#training"class="more intro-hidden-btn myButtons">Zisti viac</a>
+        <a href = "#balance"class="more intro-hidden-btn myButtons">Zisti viac</a>
       </div>
     </div>
-      
+   
     </section>
     <section id="hero">
       <img
@@ -656,23 +664,19 @@
       var review = document.getElementsByClassName("review");
 
       //BURGER ON MOBILES
-        if(window.outerWidth < 1081) {
-        if ($(".nav-links").is(":hidden")) {
-          $(document).ready(function () {
-          $(".burger").click(function () {
-          $(".nav-links").slideToggle();
-          $(".burger-icon").toggleClass("burger-black");
-          $(".nav-links").css("display", "flex");
+   
+        
+          
+          $(".burger").on('click', function() {
+            $(".nav-links").toggleClass("flex");
 
           });
-      });
-      }
-      $('.nav-links>li>a').on('click', function(){
-        $(".burger-icon").toggleClass("burger-black");
-
-    $('.nav-links').slideToggle();
-  });
-      }
+      
+       
+          $('.nav-links>li>a').on('click', function(){
+             $(".nav-links").toggleClass("flex");
+           });
+      
       
       $(".dot").hide();
       $(".dot-second").hide();
@@ -740,13 +744,16 @@ function introPlusSlides(n) {
 function introSlider(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
+  var buttons = document.getElementsByClassName("myButtons");
   if (n > slides.length) {introSlideIndex = 1}    
   if (n < 1) {introSlideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
+      buttons[i].style.display = "none";  
   }
 
   slides[introSlideIndex-1].style.display = "block";  
+  buttons[introSlideIndex-1].style.display = "block";  
 }
 
 //OCCUPATION SLIDER

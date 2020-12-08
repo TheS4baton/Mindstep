@@ -2,6 +2,24 @@
   height: 100vh;
   background-size: cover;
   position: relative;
+  .logo{
+    margin: 3rem ;
+   img{
+    width: 60%;
+    height: auto;
+   }
+  }
+  .logo-mb{
+    display: none;
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    img{
+      max-width: 50%;
+    }
+    
+   
+  }
   .intro-first,
   .intro-second,
   .intro-third {
@@ -23,6 +41,9 @@
     background-image: url("/photos/landing-slideshow-3.jpeg");
   }
   .burger {
+    display: none;
+  }
+  .intro-hidden-btn{
     display: none;
   }
   .intro-arrow-left,
@@ -70,12 +91,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 70%;
+    margin: auto;
     height: 90vh;
     .intro-text {
-      width: 60%;
       margin: auto;
       color: white;
       h2 {
+        
+        margin: auto;
         margin: 1rem 0rem;
         font-size: 3.5rem;
       }
@@ -87,9 +111,12 @@
       .more {
         background-color: #ffffff;
         padding: 1rem 2rem;
+        margin-top: 4rem;
+        max-width: 100px;
         color: black;
         font-weight: 600;
         font-size: 1.5rem;
+        text-align: center;
         cursor: pointer;
       }
     }

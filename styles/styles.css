@@ -81,6 +81,26 @@ i {
   position: relative;
 }
 
+#intro .logo {
+  margin: 3rem;
+}
+
+#intro .logo img {
+  width: 60%;
+  height: auto;
+}
+
+#intro .logo-mb {
+  display: none;
+  position: absolute;
+  top: 3%;
+  left: 5%;
+}
+
+#intro .logo-mb img {
+  max-width: 50%;
+}
+
 #intro .intro-first,
 #intro .intro-second,
 #intro .intro-third {
@@ -106,6 +126,10 @@ i {
 }
 
 #intro .burger {
+  display: none;
+}
+
+#intro .intro-hidden-btn {
   display: none;
 }
 
@@ -176,16 +200,18 @@ i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 70%;
+  margin: auto;
   height: 90vh;
 }
 
 #intro .intro-text-wrapper .intro-text {
-  width: 60%;
   margin: auto;
   color: white;
 }
 
 #intro .intro-text-wrapper .intro-text h2 {
+  margin: auto;
   margin: 1rem 0rem;
   font-size: 3.5rem;
 }
@@ -199,9 +225,12 @@ i {
 #intro .intro-text-wrapper .intro-text .more {
   background-color: #ffffff;
   padding: 1rem 2rem;
+  margin-top: 4rem;
+  max-width: 100px;
   color: black;
   font-weight: 600;
   font-size: 1.5rem;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -272,7 +301,7 @@ i {
 }
 
 #hero {
-  min-height: 70vh;
+  min-height: 80vh;
   width: 80%;
   margin: auto;
   display: -webkit-box;
@@ -461,6 +490,7 @@ i {
 #occupation .programs-learning,
 #occupation .programs-beginner {
   display: none;
+  padding-top: 6rem;
   width: 80%;
   margin: auto;
   padding-bottom: 5rem;
@@ -561,11 +591,10 @@ i {
 
 #reference {
   position: relative;
-  padding-bottom: 3rem;
 }
 
 #reference .reference-wrapper {
-  min-height: 80vh;
+  min-height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -592,7 +621,7 @@ i {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  line-height: 0.65;
+  line-height: 0.77;
 }
 
 #reference .review {
@@ -615,7 +644,7 @@ i {
 #reference .big {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  margin: 0 8rem;
+  margin: 8rem;
 }
 
 #media {
@@ -672,6 +701,7 @@ i {
   width: 30%;
   position: relative;
   padding-bottom: 5rem;
+  margin: 8rem 0;
   color: white;
 }
 
@@ -743,7 +773,7 @@ i {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 5rem;
+  margin: 5rem 0rem;
 }
 
 #contact .contact-info .info p {
@@ -829,6 +859,9 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #footer .footer-wrapper {
@@ -842,8 +875,7 @@ i {
           align-items: flex-start;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-top: 8rem;
-  margin-bottom: 1rem;
+  margin: 8rem;
 }
 
 #footer .footer-wrapper .sitemap,
@@ -989,7 +1021,7 @@ i {
   #intro {
     position: relative;
   }
-  #intro img {
+  #intro .logo {
     display: none;
   }
   #intro .burger {
@@ -1034,6 +1066,9 @@ i {
   #intro .nav-links .media-icons {
     display: none;
   }
+  #intro .logo-mb {
+    display: block;
+  }
   #occupation .occupation-text {
     padding-top: 0rem;
   }
@@ -1050,6 +1085,16 @@ i {
 
 @media screen and (max-width: 871px) {
   #intro .intro-text-wrapper .intro-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
   }
   #intro .intro-text-wrapper .intro-text h2 {
@@ -1057,6 +1102,11 @@ i {
   }
   #intro .intro-text-wrapper .intro-text p {
     font-size: 2.5rem;
+  }
+  #intro .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #hero {
     -webkit-box-orient: vertical;
@@ -1222,8 +1272,14 @@ i {
   p {
     font-size: 2rem;
   }
+  #intro {
+    min-height: 90vh;
+  }
+  #intro .intro-text-wrapper {
+    margin-top: 4rem;
+  }
   #intro .intro-text-wrapper .intro-text {
-    width: 80%;
+    width: 90%;
     text-align: center;
   }
   #intro .intro-text-wrapper .intro-text h2 {
@@ -1233,9 +1289,15 @@ i {
     font-size: 2rem;
     margin-bottom: 4rem;
   }
+  #intro .intro-text-wrapper .intro-text .more {
+    margin: 0 0 2rem 0;
+  }
   #intro .intro-arrow-right,
   #intro .intro-arrow-left {
     font-size: 3.5rem;
+  }
+  #intro .scroller {
+    display: none;
   }
   .heading-activities,
   .heading-michal,
@@ -1268,7 +1330,10 @@ i {
     font-size: 2rem;
   }
   #michal .media-text {
-    width: 80%;
+    width: 90%;
+  }
+  #michal .media-text p {
+    line-height: 3.5rem;
   }
   #footer .footer-wrapper {
     display: -webkit-box;

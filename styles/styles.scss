@@ -1,5 +1,5 @@
 $header1: 9rem;
-$header2:3rem;
+$header2: 3rem;
 $header3: 2.5rem;
 $text: 2.2rem;
 $headings: 8rem;
@@ -34,7 +34,6 @@ $headings-small: 4rem;
       }
     }
   }
-
 
   //MICHAL SECTION
   #michal {
@@ -85,26 +84,22 @@ $headings-small: 4rem;
         }
       }
     }
-    .form-wrapper{
+    .form-wrapper {
       width: 90%;
       align-items: left;
-      .contact-form{
-        
-        textarea{
+      .contact-form {
+        textarea {
           width: 60vw;
         }
-        .email-phone{
+        .email-phone {
           flex-direction: column;
         }
-        .email-input{
+        .email-input {
           margin-left: 0;
-          
         }
       }
     }
   }
-
-
 
   //FOOTER
   #footer {
@@ -124,11 +119,10 @@ $headings-small: 4rem;
 }
 
 @media screen and (max-width: 1086px) {
-
   //INTRO SECTION
   #intro {
     position: relative;
-    img {
+    .logo {
       display: none;
     }
     .burger {
@@ -138,10 +132,10 @@ $headings-small: 4rem;
       right: 5%;
       z-index: 99;
     }
-    .burger-icon{
+    .burger-icon {
       color: black;
     }
-    
+
     .nav-links {
       position: fixed;
       display: none;
@@ -151,11 +145,11 @@ $headings-small: 4rem;
       text-align: center;
       height: 100vh;
       padding: 8rem 0;
-      
+
       z-index: 99;
-      .dropdown{
+      .dropdown {
         justify-content: center;
-        i{
+        i {
           display: none;
         }
       }
@@ -166,10 +160,13 @@ $headings-small: 4rem;
       li:hover {
         background-color: #f8f8f8;
       }
-    
-      .media-icons{
+
+      .media-icons {
         display: none;
       }
+    }
+    .logo-mb {
+      display: block;
     }
   }
 
@@ -199,6 +196,9 @@ $headings-small: 4rem;
   #intro {
     .intro-text-wrapper {
       .intro-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
         h2 {
           font-size: 3.5rem;
@@ -207,6 +207,9 @@ $headings-small: 4rem;
           font-size: 2.5rem;
         }
       }
+    }
+    .flex {
+      display: flex;
     }
   }
   //HERO SECTION
@@ -251,18 +254,16 @@ $headings-small: 4rem;
         width: 80%;
         margin: auto;
       }
-      .trainer{
+      .trainer {
         border: 5px solid #cc772b;
-
       }
     }
   }
   //MICHAL SECTION
 
-  #michal{
-    .media-text{
+  #michal {
+    .media-text {
       text-align: center;
-      
     }
   }
   //MEDIA SECTION
@@ -281,14 +282,13 @@ $headings-small: 4rem;
 
   //REFERENCE SECTION
   #reference {
-  
     .reference-wrapper {
       padding: 8rem 0rem 8rem 0rem;
       flex-direction: column;
-      .big{
+      .big {
         transform: scale(1);
       }
-      .review{
+      .review {
         text-align: center;
         width: 80%;
         margin-top: 8rem;
@@ -298,38 +298,36 @@ $headings-small: 4rem;
   }
 
   //CONTACT SECTION
-  #contact{
-    .contact-info{
+  #contact {
+    .contact-info {
       width: 100%;
-      .info{
+      .info {
         width: 100%;
         text-align: center;
         margin: auto;
         padding-bottom: 5rem;
       }
     }
-    
-    .form-wrapper{
+
+    .form-wrapper {
       align-items: center;
       margin-bottom: 4rem;
-      .contact-form{
+      .contact-form {
         align-items: center;
-        input{
+        input {
           width: 80vw;
         }
-        textarea{
+        textarea {
           width: 80vw;
         }
-        .email-input{
+        .email-input {
           max-width: 100%;
         }
-        
       }
-      .send{
+      .send {
         margin-top: 4rem;
       }
     }
-    
   }
   //FOOTER
   #footer {
@@ -369,9 +367,11 @@ $headings-small: 4rem;
   // INTRO SECTION
 
   #intro {
+    min-height: 90vh;
     .intro-text-wrapper {
+      margin-top: 4rem;
       .intro-text {
-        width: 80%;
+        width: 90%;
         text-align: center;
         h2 {
           font-size: 3rem;
@@ -380,11 +380,18 @@ $headings-small: 4rem;
           font-size: 2rem;
           margin-bottom: 4rem;
         }
+        .more {
+          margin: 0 0 2rem 0;
+        }
       }
     }
+    
     .intro-arrow-right,
-    .intro-arrow-left{
+    .intro-arrow-left {
       font-size: 3.5rem;
+    }
+    .scroller{
+      display: none;
     }
   }
   .heading-activities,
@@ -401,7 +408,7 @@ $headings-small: 4rem;
       width: 100%;
       margin: 0;
       padding: 5rem 0;
-      
+
       .email {
         margin: 2rem 0;
       }
@@ -422,13 +429,16 @@ $headings-small: 4rem;
     }
   }
   //MICHAL SECTION
-  #michal{
-    .media-text{
-      width: 80%;
+  #michal {
+    .media-text {
+      width: 90%;
+      p {
+        line-height: 3.5rem;
+      }
     }
   }
 
-  //FOOTER SECTION 
+  //FOOTER SECTION
   #footer {
     .footer-wrapper {
       display: flex;
@@ -466,9 +476,9 @@ $headings-small: 4rem;
   }
 
   //REFERENCE SECTION
-  #reference{
-    .reference-wrapper{
-      .review{
+  #reference {
+    .reference-wrapper {
+      .review {
         width: 80%;
       }
     }
