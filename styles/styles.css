@@ -57,27 +57,8 @@ i {
   cursor: pointer;
 }
 
-@-webkit-keyframes animation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes animation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 #intro {
   height: 100vh;
-  background-size: cover;
   position: relative;
 }
 
@@ -104,7 +85,7 @@ i {
 #intro .intro-first,
 #intro .intro-second,
 #intro .intro-third {
-  background-image: url("/photos/intro.jpeg");
+  background-image: url("/photos/landing-1.jpg");
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -112,17 +93,16 @@ i {
   right: 0;
   top: 0;
   bottom: 0;
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
   z-index: -1;
+  width: 100%;
 }
 
 #intro .intro-second {
-  background-image: url("/photos/landing-slideshow-2.jpeg");
+  background-image: url("/photos/landing-3.jpg");
 }
 
 #intro .intro-third {
-  background-image: url("/photos/landing-slideshow-3.jpeg");
+  background-image: url("/photos/landing-2.jpg");
 }
 
 #intro .burger {
@@ -178,18 +158,6 @@ i {
   font-weight: 700;
 }
 
-#intro .scroller {
-  position: absolute;
-  bottom: 4rem;
-  left: 50%;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
-  font-size: 4rem;
-  color: white;
-  -webkit-animation: animation 1.5s infinite alternate;
-          animation: animation 1.5s infinite alternate;
-}
-
 #intro .intro-text-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -241,6 +209,19 @@ i {
   z-index: 2;
   font-size: 5rem;
   color: green;
+}
+
+#intro .consultation {
+  width: 7%;
+  text-align: center;
+  background-color: white;
+  font-size: 1.5rem;
+  position: fixed;
+  bottom: 15%;
+  right: 5%;
+  z-index: 2;
+  border-radius: 10%;
+  padding: 1rem;
 }
 
 #intro .fb {
@@ -300,8 +281,24 @@ i {
   z-index: 100;
 }
 
+#intro .fixed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 #hero {
-  min-height: 80vh;
+  position: relative;
+}
+
+#hero .hero-wrapper {
+  min-height: 60vh;
   width: 80%;
   margin: auto;
   display: -webkit-box;
@@ -313,87 +310,90 @@ i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
+  padding: 10rem 0 30em 0;
 }
 
-#hero .hero-descp {
+#hero .hero-wrapper .hero-descp {
   padding-left: 5rem;
 }
 
-#hero .hero-descp .quote {
+#hero .hero-wrapper .hero-descp .quote {
   font-size: 2.2rem;
-  margin: 6rem 0;
+  margin: 3rem 0;
 }
 
-#hero .quote-name {
+#hero .hero-wrapper .quote-name {
   font-weight: 600;
   font-size: 2.2rem;
   margin-left: 2rem;
 }
 
-#hero .portrait {
+#hero .hero-wrapper .portrait {
   border-radius: 50%;
   max-height: 230px;
 }
 
-#hero .heading-activities {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  line-height: 0.78;
-  color: #e2dddd;
-}
-
 #occupation {
   min-height: 100vh;
-  padding-bottom: 18rem;
+  padding-bottom: 40rem;
   position: relative;
 }
 
-#occupation .green {
-  color: #1c8a52;
-  font-size: 1.5rem;
-  margin-right: 2rem;
+#occupation .wrapper {
+  background-color: #f2f2f2;
+}
+
+#occupation .wrapper .top-bg {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  margin-top: -20%;
+}
+
+#occupation .wrapper .bottom-bg {
+  position: absolute;
+  z-index: -1;
+  margin-top: -20%;
+  width: 100%;
 }
 
 #occupation .transition {
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-#occupation .occupation-div {
-  padding: 10rem 0;
+#occupation .training,
+#occupation .psychology {
+  margin-bottom: -0.3rem;
+}
+
+#occupation .psychology {
+  padding-top: 3rem;
+}
+
+#occupation .balance {
+  padding-bottom: 3rem;
+}
+
+#occupation .occupation-div .occupation-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-#occupation .occupation-div .psychology {
-  border-radius: 50%;
-  border: 5px solid #1c8a52;
-}
-
-#occupation .occupation-div .training {
-  background-color: #cc772b;
-}
-
-#occupation .occupation-div .trainer {
-  border-radius: 50%;
-  border: 5px solid #cc772b;
-}
-
-#occupation .occupation-div .balance {
-  border-radius: 50%;
-  border: 5px solid #21acae;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: -0.2rem;
+  max-width: 70%;
+  margin: auto;
 }
 
 #occupation .occupation-div img {
-  height: 200px;
+  max-height: 250px;
+  width: 244.55px;
+  overflow-y: visible;
 }
 
 #occupation .occupation-div .left {
@@ -406,6 +406,7 @@ i {
 
 #occupation .occupation-div .occupation-text {
   padding-top: 3rem;
+  max-width: 55%;
 }
 
 #occupation .occupation-div .occupation-text p {
@@ -422,7 +423,7 @@ i {
   background-color: #eaeaea;
   border: none;
   padding: 1rem 2rem;
-  margin-top: 4rem;
+  margin-top: 1rem;
   outline: none;
   cursor: pointer;
 }
@@ -441,7 +442,7 @@ i {
 #occupation .programs-all {
   overflow: hidden;
   position: relative;
-  background-color: #fafafa;
+  background-color: white;
 }
 
 #occupation .programs-all .arrow-left,
@@ -471,15 +472,15 @@ i {
 }
 
 #occupation .programs-all .dots .active {
-  color: #1c8a52;
+  color: #282828;
 }
 
 #occupation .programs-all .dots .active-second {
-  color: #cc772b;
+  color: #282828;
 }
 
 #occupation .programs-all .dots .active-third {
-  color: #21acae;
+  color: #282828;
 }
 
 #occupation .race {
@@ -505,6 +506,12 @@ i {
   margin: 2rem 0;
 }
 
+#occupation .programs-balance p,
+#occupation .programs-learning p,
+#occupation .programs-beginner p {
+  line-height: 3.4rem;
+}
+
 #occupation .programs-balance ul li,
 #occupation .programs-learning ul li,
 #occupation .programs-beginner ul li {
@@ -513,10 +520,16 @@ i {
   cursor: default;
 }
 
+#occupation .programs-balance ul li .green,
+#occupation .programs-learning ul li .green,
+#occupation .programs-beginner ul li .green {
+  opacity: 1;
+}
+
 #occupation .programs-balance ul .circle,
 #occupation .programs-learning ul .circle,
 #occupation .programs-beginner ul .circle {
-  color: green;
+  color: #282828;
   font-size: 1.5rem;
   margin-right: 2rem;
 }
@@ -526,6 +539,12 @@ i {
 #occupation .programs-beginner .bottom-bold {
   margin-top: 4rem;
   font-size: 2rem;
+}
+
+#occupation .green {
+  color: #282828;
+  font-size: 1.5rem;
+  margin-right: 2rem;
 }
 
 #occupation .heading-michal {
@@ -579,7 +598,7 @@ i {
 #michal .media-text p,
 #michal .media-text h2 {
   margin: 3rem 0rem;
-  line-height: 45.2px;
+  line-height: 3.9rem;
 }
 
 #michal .heading-reference {
@@ -594,7 +613,7 @@ i {
 }
 
 #reference .reference-wrapper {
-  min-height: 90vh;
+  min-height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -604,14 +623,64 @@ i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 5rem;
 }
 
-#reference p {
-  font-size: 2rem;
+#reference .reference-wrapper .review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin: auto;
 }
 
-#reference h2 {
-  font-size: 2.5rem;
+#reference .reference-wrapper .review .reviewer {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4.5rem;
+}
+
+#reference .reference-wrapper .review .reviewer .person-review {
+  font-size: 5rem;
+}
+
+#reference .reference-wrapper .review .stars {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0 1rem 0;
+}
+
+#reference .reference-wrapper .review .stars .star {
+  font-size: 4rem;
+}
+
+#reference .review-right,
+#reference .review-left {
+  position: absolute;
+  bottom: 50%;
+  font-size: 4.5rem;
+  cursor: pointer;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+}
+
+#reference .review-right {
+  right: 5%;
+}
+
+#reference .review-left {
+  left: 5%;
 }
 
 #reference .heading-media {
@@ -619,32 +688,9 @@ i {
   color: #536260;
   bottom: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 5rem);
+          transform: translate(-50%, 5rem);
   line-height: 0.77;
-}
-
-#reference .review {
-  width: 20%;
-  height: auto;
-  background-color: #f8f8f8;
-  padding: 4rem 2rem;
-  position: relative;
-}
-
-#reference .review .stars {
-  margin: 1rem 0 2rem 0;
-}
-
-#reference .review .fa-star {
-  color: #e2b028;
-  font-size: 1.5rem;
-}
-
-#reference .big {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  margin: 8rem;
 }
 
 #media {
@@ -667,27 +713,30 @@ i {
   bottom: 0;
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
+  z-index: -1;
+}
+
+#media a,
+#media h2,
+#media p {
+  color: white;
 }
 
 #media .media-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   width: 80%;
   margin: auto;
-  text-align: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#media .media-image {
-  border-radius: 50%;
-  background-color: gray;
-  height: 50px;
-  width: 50px;
-}
-
-#media .media-content {
+#media .media-wrapper .media-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -698,31 +747,15 @@ i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30%;
-  position: relative;
-  padding-bottom: 5rem;
-  margin: 8rem 0;
-  color: white;
+  text-align: center;
+  margin-top: 3rem;
+  width: 70%;
 }
 
-#media .media-content p {
-  line-height: 1.5;
-}
-
-#media .media-content h2 {
-  margin: 1.5rem 0rem;
-}
-
-#media .media-content button {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  border: none;
-  padding: 1rem 1.5rem;
-  background-color: #f2f2f2;
-  cursor: pointer;
+#media .media-wrapper .media-content p {
+  margin-top: 1rem;
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
 }
 
 #media .heading-contact {
@@ -736,126 +769,66 @@ i {
 }
 
 #contact {
-  min-height: 70vh;
-  width: 80%;
-  margin: auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+#contact ion-icon {
+  font-size: 3rem;
+}
+
+#contact .info {
+  min-height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-#contact i {
-  color: #748687;
-}
-
-#contact .contact-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-width: 50%;
-  margin-bottom: 10rem;
-}
-
-#contact .contact-info .info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 90%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 5rem 0rem;
-}
-
-#contact .contact-info .info p {
-  line-height: 3.5rem;
-}
-
-#contact .contact-info .map {
-  max-height: 80%;
-}
-
-#contact .form-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 10rem;
+  text-align: center;
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
-#contact .form-wrapper .email-phone {
+#contact .phone,
+#contact .email,
+#contact .address {
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-#contact .form-wrapper .contact-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+#contact .phone p,
+#contact .email p,
+#contact .address p {
+  margin: auto;
 }
 
-#contact .form-wrapper .contact-form input {
-  padding: 1.5rem 2rem 1.5rem 1.5rem;
-  margin-top: 2rem;
-  border: none;
-  background-color: #f8f8f8;
-  width: 45%;
+#contact .email {
+  margin: 2rem 0;
 }
 
-#contact .form-wrapper .contact-form .email-input {
-  margin-left: 1rem;
-  max-width: 70%;
-}
-
-#contact .form-wrapper .contact-form .email-input input {
-  min-width: 50%;
-}
-
-#contact .form-wrapper .contact-form .name-input {
-  width: calc(50%-1rem);
-}
-
-#contact .form-wrapper .contact-form textarea {
-  border: none;
-  background-color: #f8f8f8;
-  margin-top: 3rem;
-  width: 30vw;
-  height: 25vh;
-  padding: 1.5rem 1.5rem;
-  resize: none;
-}
-
-#contact .form-wrapper .send {
-  margin-top: 2rem;
-  border: none;
-  width: 40%;
-  padding: 1.5rem 3rem;
-  background-color: #454647;
-  color: white;
-  cursor: pointer;
+#contact .map {
+  height: 70vh;
+  width: 100%;
 }
 
 #footer {
   min-height: 50vh;
-  background-color: #454647;
+  background-color: #282828;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -922,20 +895,30 @@ i {
 #footer .footer-wrapper .about p {
   margin-top: 0.5rem;
   font-size: 2rem;
+  opacity: 0.5;
   font-weight: 400;
   line-height: 3rem;
 }
 
 #footer a {
   color: white;
+  opacity: 0.5;
   font-size: 2rem;
   font-weight: 400;
   margin-top: 1rem;
 }
 
+#footer .socials a {
+  opacity: 1;
+}
+
 @media screen and (max-width: 1214px) {
   #intro .nav-links {
     width: 60%;
+  }
+  #intro .consultation {
+    width: 10%;
+    right: 5%;
   }
   #occupation .occupation-text {
     padding-top: 2rem;
@@ -949,11 +932,11 @@ i {
   #michal p {
     padding-bottom: 6rem;
   }
-  #media .media-wrapper {
-    width: 90%;
+  #media {
+    padding: 10rem 0 15rem 0;
   }
-  #media .media-wrapper .media-content {
-    width: 30%;
+  #media .media-content {
+    width: 50%;
   }
   #reference .reference-wrapper .review {
     min-width: 25%;
@@ -972,38 +955,12 @@ i {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
-    margin-top: 6rem;
   }
-  #contact .contact-info {
-    width: 90%;
-    margin-bottom: 3rem;
-  }
-  #contact .contact-info .info p {
-    font-size: 2rem;
-  }
-  #contact .form-wrapper {
-    width: 90%;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
-  }
-  #contact .form-wrapper .contact-form textarea {
-    width: 60vw;
-  }
-  #contact .form-wrapper .contact-form .email-phone {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  #contact .form-wrapper .contact-form .email-input {
-    margin-left: 0;
+  #contact .map {
+    width: 100%;
   }
   #footer .footer-wrapper .about {
     width: 15%;
@@ -1069,17 +1026,27 @@ i {
   #intro .logo-mb {
     display: block;
   }
-  #occupation .occupation-text {
+  #occupation .wrapper .occupation-text {
     padding-top: 0rem;
   }
-  #occupation .occupation-text p {
+  #occupation .wrapper .occupation-text p {
     font-size: 1.7rem;
   }
-  #occupation .occupation-text h2 {
+  #occupation .wrapper .occupation-text h2 {
     font-size: 2.5rem;
+  }
+  #occupation .wrapper .training,
+  #occupation .wrapper .psychology {
+    margin-bottom: -0.9rem;
   }
   #media .media-wrapper {
     width: 90%;
+  }
+  #reference .review-right {
+    right: 3%;
+  }
+  #reference .review-left {
+    left: 3%;
   }
 }
 
@@ -1103,12 +1070,16 @@ i {
   #intro .intro-text-wrapper .intro-text p {
     font-size: 2.5rem;
   }
+  #intro .consultation {
+    width: 14%;
+    font-size: 1.3rem;
+  }
   #intro .flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  #hero {
+  #hero .hero-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1119,10 +1090,14 @@ i {
     text-align: center;
     padding: 7rem 0 15rem;
   }
-  #hero .hero-descp {
+  #hero .hero-wrapper .hero-wrapper .wave-top {
+    bottom: -5rem;
+    z-index: 2;
+  }
+  #hero .hero-wrapper .hero-descp {
     padding: 2rem 0;
   }
-  #hero .portrait {
+  #hero .hero-wrapper .portrait {
     height: 200px;
     width: 200px;
   }
@@ -1133,14 +1108,22 @@ i {
   .heading-contact {
     font-size: 8rem;
   }
+  #occupation .wave-bottom {
+    bottom: 10%;
+  }
+  #occupation .picture {
+    display: none;
+  }
   #occupation .occupation-div {
     padding-top: 6rem;
+  }
+  #occupation .occupation-div .occupation-wrapper {
     display: block;
+    width: 100%;
+    padding-bottom: 5rem;
   }
   #occupation .occupation-div .picture {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1148,16 +1131,19 @@ i {
   #occupation .occupation-div .picture img {
     margin: 0;
   }
+  #occupation .occupation-div .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   #occupation .occupation-div .right {
     display: none;
   }
   #occupation .occupation-div .occupation-text {
     text-align: center;
-    width: 80%;
+    max-width: 100%;
     margin: auto;
-  }
-  #occupation .occupation-div .trainer {
-    border: 5px solid #cc772b;
+    padding-top: 3rem;
   }
   #michal .media-text {
     text-align: center;
@@ -1173,11 +1159,10 @@ i {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 8rem 0rem;
+    padding-bottom: 8rem;
   }
   #media .media-wrapper .media-content {
     width: 80%;
-    margin: 6rem 0rem;
   }
   #reference {
     padding-bottom: 10rem;
@@ -1188,15 +1173,26 @@ i {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  #reference .reference-wrapper .big {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  #reference .reference-wrapper .stars {
+    width: 30%;
+    margin: auto;
   }
   #reference .reference-wrapper .review {
     text-align: center;
     width: 80%;
     margin-top: 8rem;
+  }
+  #reference .heading-media {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
   #contact .contact-info {
     width: 100%;
@@ -1205,30 +1201,12 @@ i {
     width: 100%;
     text-align: center;
     margin: auto;
-    padding-bottom: 5rem;
+    padding: 5rem 0 5rem 0;
   }
-  #contact .form-wrapper {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 4rem;
-  }
-  #contact .form-wrapper .contact-form {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #contact .form-wrapper .contact-form input {
-    width: 80vw;
-  }
-  #contact .form-wrapper .contact-form textarea {
-    width: 80vw;
-  }
-  #contact .form-wrapper .contact-form .email-input {
-    max-width: 100%;
-  }
-  #contact .form-wrapper .send {
-    margin-top: 4rem;
+  #contact .contact-info .info .email,
+  #contact .contact-info .info .phone,
+  #contact .contact-info .info .address {
+    width: 50%;
   }
   #footer {
     padding-bottom: 6rem;
@@ -1263,7 +1241,7 @@ i {
     width: 100%;
     text-align: center;
   }
-  #footer .footer-wrapper .personal {
+  #footer .footer-wrapper .contact {
     grid-column: span 2;
   }
 }
@@ -1275,12 +1253,10 @@ i {
   #intro {
     min-height: 90vh;
   }
-  #intro .intro-text-wrapper {
-    margin-top: 4rem;
-  }
   #intro .intro-text-wrapper .intro-text {
     width: 90%;
     text-align: center;
+    padding-bottom: 10rem;
   }
   #intro .intro-text-wrapper .intro-text h2 {
     font-size: 3rem;
@@ -1292,12 +1268,15 @@ i {
   #intro .intro-text-wrapper .intro-text .more {
     margin: 0 0 2rem 0;
   }
+  #intro .consultation {
+    width: 20%;
+  }
+  #intro .whatsapp {
+    right: 8%;
+  }
   #intro .intro-arrow-right,
   #intro .intro-arrow-left {
     font-size: 3.5rem;
-  }
-  #intro .scroller {
-    display: none;
   }
   .heading-activities,
   .heading-michal,
@@ -1306,28 +1285,28 @@ i {
   .heading-contact {
     font-size: 4rem;
   }
-  #contact {
-    margin-top: 1rem;
-  }
   #contact .contact-info {
     width: 100%;
-    margin: 0;
-    padding: 5rem 0;
-  }
-  #contact .contact-info .email {
-    margin: 2rem 0;
   }
   #contact .contact-info .info {
+    margin-bottom: 4rem;
     width: 100%;
-    display: block;
-    text-align: center;
-    margin-top: 1rem;
   }
-  #contact .contact-info .info p {
-    font-size: 2rem;
-  }
-  .form h1 {
-    font-size: 2rem;
+  #contact .contact-info .info .email,
+  #contact .contact-info .info .phone,
+  #contact .contact-info .info .address {
+    width: 70%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 4rem;
   }
   #michal .media-text {
     width: 90%;
@@ -1346,6 +1325,9 @@ i {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  #occupation .wave-bottom {
+    bottom: 10%;
   }
   #occupation .programs-balance,
   #occupation .programs-learning,
@@ -1373,8 +1355,14 @@ i {
   #media .media-wrapper .media-content {
     width: 90%;
   }
+  #reference .reference-wrapper {
+    height: 60vh;
+  }
   #reference .reference-wrapper .review {
-    width: 80%;
+    width: 60%;
+  }
+  #hero .hero-wrapper .wave-top {
+    bottom: -10%;
   }
 }
 

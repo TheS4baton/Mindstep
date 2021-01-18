@@ -1,82 +1,37 @@
 #contact {
-  min-height: 70vh;
-  width: 80%;
-  margin: auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  i {
-    color: #748687;
+  min-height: 100vh;
+  position: relative;
+  ion-icon {
+    font-size: 3rem;
   }
-  .contact-info {
+  .info {
+    min-height: 30vh;
     display: flex;
     flex-direction: column;
-    min-width: 50%;
-    margin-bottom: 10rem;
-    .info {
-      display: flex;
-      width: 90%;
-      justify-content: space-between;
-      margin: 5rem 0rem;
-      p{
-        line-height: 3.5rem;
-      }
-    }
-    .map {
-      max-height: 80%;
-    }
-  }
-
-  .form-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10rem;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
     margin-top: 5rem;
-    .email-phone{
-      display: flex;
-    }
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      input {
-        padding: 1.5rem 2rem 1.5rem 1.5rem;
-        margin-top: 2rem;
-        border: none;
-        background-color: #f8f8f8;
-        width: 45%;
-        
-      }
-      .email-input{
-        margin-left: 1rem;
-        max-width: 70%;
-        input{
-          min-width: 50%;
-        }
-        
+    margin-bottom: 5rem;
+  }
+  .phone,
+  .email,
+  .address {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start ;
 
-      }
-      .name-input{
-        width: calc(50%-1rem);
-      }
+    p {
+      margin: auto;
       
-      textarea {
-        border: none;
-        background-color: #f8f8f8;
-        margin-top: 3rem;
-        width: 30vw;
-        height: 25vh;
-        padding: 1.5rem 1.5rem;
-        resize: none;
-      }
     }
-    .send {
-      margin-top: 2rem;
-      border: none;
-      width: 40%;
-      padding: 1.5rem 3rem;
-      background-color: #454647;
-      color: white;
-      cursor: pointer;
-    }
+  }
+  .email{
+    margin: 2rem 0;
+  }
+  .map {
+    height: 70vh;
+    width: 100%;
   }
 }

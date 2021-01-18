@@ -7,7 +7,7 @@
       src="https://kit.fontawesome.com/267860f909.js"
       crossorigin="anonymous"
     ></script>
-
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>MINDstep psychológia Michal Murárik</title>
@@ -41,12 +41,12 @@
               </div>
 
             </li>
-            <li> <a href="#hero"> O mne </a></li>
+            <li> <a href="#michal"> O mne </a></li>
             <li><a href="#reference"> Referencie </a></li>
             <li><a href="#media"> Média </a></li>
             <li><a href="#contact"> Kontakt </a></li>
             <li class = "media-icons">
-              <a href=""><i class="fab fa-facebook-square fb"></i></a>
+              <a target ="_blank" href=" https://www.facebook.com/mindstep.sk"><i class="fab fa-facebook-square fb"></i></a>
               <a target ="_blank"href="https://www.linkedin.com/in/michal-murarik-75ab0638/"><i class="fab fa-linkedin"></i></a>
             </li>
           </ul>
@@ -54,21 +54,32 @@
             <i class="fa fa-bars burger-icon"></i>
           </a>
         </nav>
-        <a href="#hero"><i class="fas fa-chevron-down scroller"></i></a>
-        <i class="fab fa-whatsapp-square whatsapp"></i>
+        <div class="fixed">
+        <a class = "consultation" href="#contact">30-minútová online konzultácia bezplatne</a>
+        <a href="tel: +421 907 722 781"><i class="fab fa-whatsapp-square whatsapp"></i></a>
+      </div>
       </header>
       <div class="intro-text-wrapper">
         <div class="intro-text">
         <h2>Mentálny tréning a psychologická príprava športovcov</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem a eligendi iusto quas expedita ad aperiam nulla ab eius et!</p>
+        <p>Podpora a príprava vrcholových aj hobby športovcov pri dosahovaní výkonov</p>
         <a href = "#psychology"class="more myButtons">Zisti viac</a>
-        <a href = "#training"class="more intro-hidden-btn myButtons">Zisti viac</a>
-        <a href = "#balance"class="more intro-hidden-btn myButtons">Zisti viac</a>
+      </div>
+      <div class="intro-text">
+        <h2>Vzdelávanie pre trénerov, rodičov a vzdelávanie klubov</h2>
+        <p>Rozvoj dôležitých zručností v oblasti psychológie športu pre okolie športovca!</p>
+        <a href = "#training"class="more myButtons">Zisti viac</a>
+      </div>
+      <div class="intro-text">
+        <h2>Work in Balance - Life koučing, vyhorenie a stres</h2>
+        <p>Sprevádzanie ťažkými situáciami v živote aj práci, nastavenie rovnováhy v živote aj v práci</p>
+        <a href = "#balance"class="more myButtons">Zisti viac</a>
       </div>
     </div>
    
     </section>
     <section id="hero">
+      <div class="hero-wrapper">
       <img
         class="portrait"
         src="/photos/michal.png"
@@ -82,18 +93,32 @@
         </p>
         <span class="quote-name">-Muhamad ali</span>
       </div>
-      <h1 class="heading-activities">ČINNOSTI</h1>
+
+      </div>
+
     </section>
 
     <!-- OCCUPATION SECTION-->
 
     <section id="occupation">
+
       <div class="wrapper">
+        <img class = "top-bg" src="/photos/wave-top.png" alt="">
+
         <div id ="psychology" class="occupation-div psychology transition">
+          <div class="occupation-wrapper">
+
           <div class="picture">
             <img
-              class="left psychology"
-              src="/photos/sportova copy.png"
+              class="left"
+              src="/photos/top.png"
+              alt=""
+            />
+          </div>
+          <div class="picture mobile">
+            <img
+              class="left"
+              src="/photos/sport.png"
               alt=""
             />
           </div>
@@ -107,6 +132,7 @@
               Programy <i class="fas fa-chevron-down down"></i>
             </button>
           </div>
+        </div>
         </div>
             <!--  PROGRAM 1 -->
 
@@ -291,8 +317,17 @@
 
         
         <div id ="training" class="occupation-div training transition">
+          <div class="occupation-wrapper">
+         
+          <div class="picture">
+            <img class="left trainer" src="/photos/center.png" alt="" />
+          </div>
           <div class="picture mobile">
-            <img class="left trainer" src="/photos/export trainer.png" alt="" />
+            <img
+              class="left"
+              src="/photos/trainer.png"
+              alt=""
+            />
           </div>
           <div class="occupation-text">
             <h2>Vzdelávanie pre trénerov, rodičov a vzdelávanie klubov</h2>
@@ -305,7 +340,8 @@
               Programy <i class="fas fa-chevron-down down"></i>
             </button>
           </div>
-          <img class="right trainer" src="/photos/export trainer.png" alt="" />
+          </div>
+         
 
           
         </div>
@@ -379,10 +415,18 @@
           </div>
         </div>
 
+        
         <div id ="balance" class="occupation-div balance-bg transition">
-          
+          <div class="occupation-wrapper">
             <div class="picture">
-              <img class="left balance" src="/photos/export work.png" alt="" />
+              <img class="left balance" src="/photos/bottom.png" alt="" />
+            </div>
+            <div class="picture mobile">
+              <img
+                class="left"
+                src="/photos/work.png"
+                alt=""
+              />
             </div>
             <div class="occupation-text">
               <h2>Work in Balance - Life koučing, vyhorenie a stress</h2>
@@ -394,6 +438,7 @@
               <button class="programs-third btn-hov" onclick = "occupationSlides(this)">
                 Programy <i class="fas fa-chevron-down down"></i>
               </button>
+            </div>
             </div>
         
           <h1 class="heading-michal">O MNE</h1>
@@ -463,17 +508,19 @@
                   5 stretnutí – 150€
               </p>
             </div> 
-         
+
           <div class ="dots" style="text-align:center">
             <span  id = "dot-third" onclick="currentSlide(1,this.id)"><i class="fas fa-circle blue  dot-third "></i></span> 
             <span id = "dot-third" onclick="currentSlide(2,this.id)"><i class="fas fa-circle blue  dot-third"></i></span> 
             <span id = "dot-third" onclick="currentSlide(3, this.id)"><i class="fas fa-circle blue dot-third"></i></span> 
           </div>
         </div>
+        <img class = "bottom-bg" src="/photos/wave-bottom.png" alt="">
+
       </div>
     </section>
     <section id="michal">
-      
+
       <div class="bg-wrap">
 
       </div>
@@ -488,134 +535,115 @@
               <h1 class="heading-reference">REFERENCIE</h1>
     </section>
     <section id="reference">
-    <div class="reference-wrapper">
+      <div class="reference-wrapper">
+        <div class="review">
+          <h2 class ="reviewer"><ion-icon class = "person-review" name="person"></ion-icon> Viktória</h2>
+          <div class="stars">
+          <ion-icon class = "star" name="star"></ion-icon>
+          <ion-icon class = "star" name="star"></ion-icon>
+          <ion-icon class = "star" name="star"></ion-icon>
+          <ion-icon class = "star" name="star"></ion-icon>
+          <ion-icon class = "star" name="star"></ion-icon>
+          </div>
+          <p>Povedala by som to takto: Terapia a sedenia ma podnietili nie len o tom hovoriť, ale aj pracovať na sebe. Rady ktoré som dostala, som využila a stále využívam v praxi a posúvajú ma dopredu. Cieľ som dosiahla a moje myslenie sa zmenilo na lepšie a slobodnejšie. Môžem iba odporučiť, výsledok stojí zato!
 
-      <div class="review left">
-        <h2 class="name">Matúš Bernolák</h2>
-        <p class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </p>
-        <p class="review-text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
-          asperiores aliquid incidunt qui, eius voluptates id perferendis vitae
-          tenetur voluptatibus?
-        </p>
+
+          </p>
+        </div>
+        <div class="review">
+          <h2 class ="reviewer"><ion-icon class = "person-review" name="person"></ion-icon> Lenka</h2>
+          <div class="stars">
+          <ion-icon class = "star" name="star"></ion-icon>
+          <ion-icon class = "star" name="star"></ion-icon>
+          <ion-icon class = "star" name="star"></ion-icon>
+          <ion-icon class = "star" name="star"></ion-icon>
+          <ion-icon class = "star" name="star"></ion-icon>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur temporibus neque, itaque suscipit iusto, soluta earum perspiciatis repellat accusamus voluptatum unde nisi quo omnis repellendus tenetur magnam? Excepturi, dignissimos omnis?
+
+          </p>
+        </div>
+        
       </div>
-      <div class="review big">
-        <h2 class="name">Matúš Bernolák</h2>
-        <p class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </p>
-        <p class="review-text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
-          asperiores aliquid incidunt qui, eius voluptates id perferendis vitae
-          tenetur voluptatibus?
-        </p>
-      </div>
-      <div class="review right">
-        <h2 class="name">Matúš Bernolák</h2>
-        <p class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </p>
-        <p class="review-text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
-          asperiores aliquid incidunt qui, eius voluptates id perferendis vitae
-          tenetur voluptatibus?
-        </p>
-      </div>
-    </div>
+      <ion-icon onclick ="referencePlusSlides(1)" class = "review-right" name="chevron-forward-circle-outline"></ion-icon>
+      <ion-icon onclick ="referencePlusSlides(-1)" class = "review-left" name="chevron-back-circle-outline"></ion-icon>
+
+      
       
       <h1 class="heading-media">MÉDIA</h1>
-    </section>
+  </section>
     <section id="media">
       <div class="bg-media">
-
+        
       </div>
-    <div class="media-wrapper">
+      <div class="media-wrapper">
       <div class="media-content">
-        <div class = "media-image"> </div>
-          <h2>Denník N</h2>
+        <h2>Oblasti pôsobenia</h2>
+        <div class="media-content">
+          <a target = "_blank" href="https://www.cyklistikaszc.sk/sk/submenu/sportovy-psycholog">cyklistikaszc.sk</a>
+          <p>Slovenský zväz cyklistiky - ŠPORTOVÝ PSYCHOLÓG</p>
+        </div>
+        <div class="media-content">
+          <a  target = "_blank" href="http://www.sportpsych.sk/michal-murarik">sportpsych.sk</a>
+          <p>PaeDr. Mgr. Michal Murárik</p>
+        </div>
+        <div class="media-content">
+          <a  target = "_blank" href="https://www.maxman-consultants.com/consultants/michal-murarik">maxman-consultants.sk</a>
+          <p>Michal Murárik</p>
+        </div>
+      </div>
+      <div class="media-content">
+        <h2>Články</h2>
+        <div class="media-content">
+          <a target = "_blank" href="https://dennikn.sk/1972333/predstieral-ze-zastupuje-stredoafricku-republiku-beckerov-pribeh-od-wimbledonu-po-bankrot/?cst=de712d087a5d82c7844980dbf777dadabd871e80">dennikn.sk</a>
+          <p>Chceš začať Športovať? Naučte mozog fungovať iným spôsobom, hovorí športový psychológ</p>
+        </div>
+        <div class="media-content">
+          <a target = "_blank" href="https://dennikn.sk/1635649/chcete-zacat-sportovat-naucte-mozog-fungovat-inym-sposobom-hovori-sportovy-psycholog/?fbclid=IwAR1ardTHzlhzrUYFW8NquZaZsjH7EKlFOdEc9XA7Cym6hTOltqxIzME5jLM">dennikn.sk</a>
           <p>Predstieral, že zastupuje Stredoafrickú republiku. Beckerov príbeh of Wimbledonu po bankrot</p>
-        <a href="https://dennikn.sk/1972333/predstieral-ze-zastupuje-stredoafricku-republiku-beckerov-pribeh-od-wimbledonu-po-bankrot/?cst=de712d087a5d82c7844980dbf777dadabd871e80
-        https://dennikn.sk/1635649/chcete-zacat-sportovat-naucte-mozog-fungovat-inym-sposobom-hovori-sportovy-psycholog/?fbclid=IwAR1ardTHzlhzrUYFW8NquZaZsjH7EKlFOdEc9XA7Cym6hTOltqxIzME5jLM
-        " target="_blank"><button class="link">Prejsť na článok</button></a>
+        </div>
       </div>
-      <div class="media-content">
-        <div class = "media-image"></div>
-          <h2>Denník N</h2>
-          <p>Chcete začať športovať? Naučte svoj mozog fungovať iným spôsobom, hovorí športový psychológ</p>
-        <a target ="_blank" href="https://dennikn.sk/1635649/chcete-zacat-sportovat-naucte-mozog-fungovat-inym-sposobom-hovori-sportovy-psycholog/?fbclid=IwAR1ardTHzlhzrUYFW8NquZaZsjH7EKlFOdEc9XA7Cym6hTOltqxIzME5jLM"><button class="link">Prejsť na článok</button></a>
-      </div>
-      <div class="media-content">
-        <div class = "media-image">        </div>
 
-          <h2>Youtube</h2>
+      <div class="media-content">
+        <h2>Videá</h2>
+        <div class="media-content">
+          <a target = "_blank" href="https://www.youtube.com/watch?v=W_ACzXt6EEw&feature=youtu.be">youtube.com</a>
           <p>Sebapoznanie ako cesta k práci snov | MAXMAN ACADEMY Michal Murárik</p>
-        <a href="https://www.youtube.com/watch?v=W_ACzXt6EEw HYPERLINK " target="_blank"><button class="link">Prejsť na článok</button></a>
+        </div>
+        <div class="media-content">
+          <a target = "_blank" href="https://www.youtube.com/watch?v=4HoX1_X75Gw&feature=youtu.be">youtube.com</a>
+          <p>Michal Murárik</p>
+        </div>
       </div>
     </div>
+
       <h1 class="heading-contact">KONTAKT</h1>
     </section>
     <section id="contact">
       <div class="contact-info">
         <div class="info">
           <div class="phone">
-            <i class="fas fa-phone-square-alt"></i>
+            <ion-icon name="call"></ion-icon>
             <p>
-              +421 902 654 221 <br />
-              02/6526 5432
+              +421 907 722 781
             </p>
           </div>
           <div class="email">
-            <i class="fas fa-envelope"></i>
+            <ion-icon name="mail"></ion-icon>
             <p>
-              info@mindstep.sk <br />
-              murarik@mindstep.sk
+              michal.murarik@gmail.com
             </p>
           </div>
           <div class="address">
-            <i class="fas fa-map-marker-alt"></i>
+            <ion-icon name="navigate"></ion-icon>
             <p>
-              Bratislavská 1 <br />
-              Bratislava, Slovensko
+              Kozia 19, Bratislava
             </p>
           </div>
         </div>
         <div class="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.9413524231722!2d17.168316215649405!3d48.14993587922435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c88cd7b309a09%3A0x13b274e02c532fa7!2sTerramia!5e0!3m2!1ssk!2ssk!4v1604783256922!5m2!1ssk!2ssk"
-            width="100%"
-            height="300"
-            frameborder="0"
-            style="border: 0"
-            allowfullscreen=""
-            aria-hidden="false"
-            tabindex="0"
-          ></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.0980458057275!2d17.100101215989124!3d48.146914979224185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c895c01b0a5b3%3A0xb22a0d5498f740b8!2sMindstep!5e0!3m2!1ssk!2ssk!4v1608488989247!5m2!1ssk!2ssk" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
-      </div>
-      <div class="form-wrapper">
-        <form class = 'contact-form' action="">
-          <input class ="name-input"type="text" placeholder = "Meno a Priezvisko">
-          <div class="email-phone">
-            <input  type="text" placeholder = "Email">
-            <input class ="email-input" type="text" placeholder = "Telefónne číslo">
-          </div>
-          <textarea placeholder = "Správa"name="message" id="" cols="0" rows="10"></textarea>
-        </form>
-        <button class="send"> Odoslať</button>
       </div>
     </section>
     <section id="footer">
@@ -630,7 +658,7 @@
         </div>
         <div class="activity">
           <h2>Činnosti</h2>
-          <a onClick = "j()" href="#psychology">Športová psychológia</a>
+          <a href="#psychology">Športová psychológia</a>
           <a href="#training">Vzdelávanie trénerov</a>
           <a href="#balance">Work in balance</a>
         </div>
@@ -641,23 +669,11 @@
           <a href="">Bratislavská 1</a>
           <a href="">Bratislava, Slovensko</a>
           <div class="socials">
-            <a href=""><i class="fab fa-facebook-square"></i></a>
-            <a href=""><i class="fab fa-linkedin"></i></a>
+            <a target = "_blank" href="https://www.facebook.com/mindstep.sk"><i class="fab fa-facebook-square"></i></a>
+            <a target = "_blank" href="https://www.linkedin.com/in/michal-murarik-75ab0638"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
-        <div class="about">
-          <h2>O mne</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Reiciendis, consequuntur. Quod sunt modi voluptates? Maiores.
-          </p>
-        </div>
-        <div class="personal">
-          <h2>Osobné</h2>
-          <a href="">Ochrana osobných údajov</a>
-          <a href="">Nastavenie cookies</a>
-          <a href="">Zmluvné podmienky</a>
-        </div>
+        
       </div>
     </section>
     <script>
@@ -689,32 +705,38 @@
         if($(c).hasClass("programs")){
           var program = ".programs-beginner";
           var div = ".psychology";
-          var color = "#1c8a52";
+          var color = "#282828";
           var dot = ".dot";
           var toHide = ".race";
           var first =".dot:first"
           var active = "active";
+          var textColor = "white"
 
         } else if($(c).hasClass("programs-second")){
           var program = ".programs-learning";
           var div = ".training";
-          var color = "#cc772b";
+          var color = "#282828";
           var dot = ".dot-second";
           var toHide = ".hide";
           var first =".dot-second:first"
           var active = "active-second";
+          var textColor = "white"
+
         } else {
           var program = ".programs-balance";
           var div = ".balance-bg";
-          var color = "#21acae";
+          var color = "#282828";
           var dot = ".dot-third";
           var toHide = ".hide-second";
           var first =".dot-third:first"
           var active = "active-third";
+          var textColor = "white"
+
         }
         
         if($(program).is(":visible")){
-          $(div).css("background-color", "white");
+          $(div).css("background-color", "#f2f2f2");
+          $(div).css("color", "black");
           $(program).slideUp();
           $(dot).hide();
           $(dot).removeClass(active);
@@ -722,6 +744,7 @@
         } else{
           slideIndex =1;
           $(div).css("background-color", color);
+          $(div).css("color", textColor);
           $(program).slideDown();
           $(toHide).hide();
           $(dot).show();
@@ -731,8 +754,27 @@
       
     
 
-      
+//REFERENCE SLIDER
+var referenceIndex = 1;
+referenceSlider(referenceIndex);
 
+function referencePlusSlides(n) {
+  referenceSlider(referenceIndex += n);
+}
+function referenceSlider(n) {
+  var i;
+  var reviews = document.getElementsByClassName("review");
+
+  if (n > reviews.length) {referenceIndex = 1}    
+  if (n < 1) {referenceIndex = reviews.length}
+  for (i = 0; i < reviews.length; i++) {
+      reviews[i].style.display = "none";  
+ 
+  }
+
+  reviews[referenceIndex-1].style.display = "block";  
+
+}
 //INTRO SLIDER
 var introSlideIndex = 1;
 introSlider(introSlideIndex);
@@ -745,15 +787,18 @@ function introSlider(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var buttons = document.getElementsByClassName("myButtons");
+  var text = document.getElementsByClassName("intro-text")
   if (n > slides.length) {introSlideIndex = 1}    
   if (n < 1) {introSlideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
-      buttons[i].style.display = "none";  
+      text[i].style.display = "none";  
+ 
   }
 
   slides[introSlideIndex-1].style.display = "block";  
-  buttons[introSlideIndex-1].style.display = "block";  
+  text[introSlideIndex-1].style.display = "block";  
+
 }
 
 //OCCUPATION SLIDER

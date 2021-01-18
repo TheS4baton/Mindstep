@@ -20,10 +20,15 @@ $headings-small: 4rem;
     .nav-links {
       width: 60%;
     }
+    .consultation{
+      width: 10%;
+      right: 5%;
+    }
   }
 
   //OCCUPATION SECTION
   #occupation {
+    
     .occupation-text {
       padding-top: 2rem;
       p {
@@ -44,12 +49,12 @@ $headings-small: 4rem;
 
   //MEDIA SECTION
   #media {
-    .media-wrapper {
-      width: 90%;
+    
       .media-content {
-        width: 30%;
+        width: 50%;
       }
-    }
+      padding: 10rem 0 15rem 0;
+    
   }
 
   //REFERENCE SECTION
@@ -71,33 +76,9 @@ $headings-small: 4rem;
   #contact {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: left;
-    margin-top: 6rem;
-    .contact-info {
-      width: 90%;
-      margin-bottom: 3rem;
-
-      .info {
-        p {
-          font-size: 2rem;
-        }
-      }
-    }
-    .form-wrapper {
-      width: 90%;
-      align-items: left;
-      .contact-form {
-        textarea {
-          width: 60vw;
-        }
-        .email-phone {
-          flex-direction: column;
-        }
-        .email-input {
-          margin-left: 0;
-        }
-      }
+    .map{
+      width: 100%;
     }
   }
 
@@ -172,6 +153,7 @@ $headings-small: 4rem;
 
   //OCCUPATION SCTION
   #occupation {
+    .wrapper{
     .occupation-text {
       padding-top: 0rem;
       p {
@@ -181,6 +163,12 @@ $headings-small: 4rem;
         font-size: 2.5rem;
       }
     }
+    .training,
+  .psychology {
+    margin-bottom: -0.9rem;
+  }
+  }
+    
   }
 
   //MEDIA SECTION
@@ -189,7 +177,20 @@ $headings-small: 4rem;
       width: 90%;
     }
   }
+  //REFERENCE SECTION
+  #reference{
+    .review-right{
+      right: 3%;
+    }
+    .review-left{
+      left: 3%;
+    }
+    
+  }
+
 }
+
+
 
 @media screen and (max-width: 871px) {
   // INTRO SECTION
@@ -208,16 +209,28 @@ $headings-small: 4rem;
         }
       }
     }
+    .consultation{
+      width: 14%;
+      font-size: 1.3rem;
+    }
     .flex {
       display: flex;
     }
   }
   //HERO SECTION
   #hero {
+    .hero-wrapper{
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 7rem 0 15rem;
+    .hero-wrapper{
+      .wave-top{
+        bottom: -5rem;
+        z-index: 2;
+      }
+    }
+  
     .hero-descp {
       padding: 2rem 0;
     }
@@ -225,6 +238,7 @@ $headings-small: 4rem;
       height: 200px;
       width: 200px;
     }
+  }
   }
   .heading-activities,
   .heading-michal,
@@ -236,27 +250,41 @@ $headings-small: 4rem;
 
   //OCCUPATION SECTION
   #occupation {
+    
+    .wave-bottom{
+      bottom: 10%;
+    }
+    .picture{
+      display: none;
+    }
+    
     .occupation-div {
       padding-top: 6rem;
-      display: block;
+      .occupation-wrapper{
+        display: block;
+        width: 100%;
+        padding-bottom: 5rem;
+      }
       .picture {
-        display: flex;
+        display: none;
         justify-content: center;
         img {
           margin: 0;
         }
+      }
+      .mobile{
+        display: flex;
       }
       .right {
         display: none;
       }
       .occupation-text {
         text-align: center;
-        width: 80%;
+        max-width: 100%;
         margin: auto;
+        padding-top: 3rem;
       }
-      .trainer {
-        border: 5px solid #cc772b;
-      }
+     
     }
   }
   //MICHAL SECTION
@@ -272,12 +300,13 @@ $headings-small: 4rem;
     .media-wrapper {
       flex-direction: column;
       align-items: center;
-      padding: 8rem 0rem;
+      padding-bottom: 8rem;
       .media-content {
         width: 80%;
-        margin: 6rem 0rem;
+       
       }
     }
+    
   }
 
   //REFERENCE SECTION
@@ -285,16 +314,25 @@ $headings-small: 4rem;
     .reference-wrapper {
       padding: 8rem 0rem 8rem 0rem;
       flex-direction: column;
-      .big {
-        transform: scale(1);
-      }
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+     .stars{
+       width: 30%;
+       margin: auto;
+     }
       .review {
         text-align: center;
         width: 80%;
         margin-top: 8rem;
       }
     }
+    .heading-media{
+      transform: translate(-50%, 0);
+
+    }
     padding-bottom: 10rem;
+
   }
 
   //CONTACT SECTION
@@ -305,29 +343,15 @@ $headings-small: 4rem;
         width: 100%;
         text-align: center;
         margin: auto;
-        padding-bottom: 5rem;
+        padding: 5rem 0 5rem 0;
+        .email,
+        .phone,
+        .address{
+          width: 50%
+        }
       }
     }
 
-    .form-wrapper {
-      align-items: center;
-      margin-bottom: 4rem;
-      .contact-form {
-        align-items: center;
-        input {
-          width: 80vw;
-        }
-        textarea {
-          width: 80vw;
-        }
-        .email-input {
-          max-width: 100%;
-        }
-      }
-      .send {
-        margin-top: 4rem;
-      }
-    }
   }
   //FOOTER
   #footer {
@@ -353,7 +377,7 @@ $headings-small: 4rem;
         width: 100%;
         text-align: center;
       }
-      .personal {
+      .contact {
         grid-column: span 2;
       }
     }
@@ -369,10 +393,10 @@ $headings-small: 4rem;
   #intro {
     min-height: 90vh;
     .intro-text-wrapper {
-      margin-top: 4rem;
       .intro-text {
         width: 90%;
         text-align: center;
+        padding-bottom: 10rem;
         h2 {
           font-size: 3rem;
         }
@@ -385,14 +409,18 @@ $headings-small: 4rem;
         }
       }
     }
+    .consultation{
+      width: 20%;
+    }
+    .whatsapp{
+      right: 8%;
+    }
     
     .intro-arrow-right,
     .intro-arrow-left {
       font-size: 3.5rem;
     }
-    .scroller{
-      display: none;
-    }
+  
   }
   .heading-activities,
   .heading-michal,
@@ -403,30 +431,26 @@ $headings-small: 4rem;
   }
   //CONTACT SECTION
   #contact {
-    margin-top: 1rem;
-    .contact-info {
+    .contact-info{
       width: 100%;
-      margin: 0;
-      padding: 5rem 0;
+      
+      .info{
+        margin-bottom: 4rem;
 
-      .email {
-        margin: 2rem 0;
-      }
-      .info {
         width: 100%;
-        display: block;
-        text-align: center;
-        margin-top: 1rem;
-        p {
-          font-size: 2rem;
+        .email,
+        .phone,
+        .address{
+          width: 70%;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 4rem;
         }
       }
     }
-  }
-  .form {
-    h1 {
-      font-size: 2rem;
-    }
+
   }
   //MICHAL SECTION
   #michal {
@@ -449,6 +473,9 @@ $headings-small: 4rem;
 
   // OCCUPATION SECTION
   #occupation {
+    .wave-bottom{
+      bottom: 10%;
+    }
     .programs-balance,
     .programs-learning,
     .programs-beginner {
@@ -478,12 +505,24 @@ $headings-small: 4rem;
   //REFERENCE SECTION
   #reference {
     .reference-wrapper {
+      height: 60vh;
       .review {
-        width: 80%;
+        width: 60%;
+      }
+    }
+    
+  }
+
+  //HERO SECTION
+  #hero{
+    .hero-wrapper{
+      .wave-top{
+        bottom: -10%;
       }
     }
   }
 }
+
 
 @media screen and (max-width: 1461px) {
   #contact {

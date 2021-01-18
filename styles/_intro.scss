@@ -1,6 +1,5 @@
 #intro {
   height: 100vh;
-  background-size: cover;
   position: relative;
   .logo{
     margin: 3rem ;
@@ -23,7 +22,7 @@
   .intro-first,
   .intro-second,
   .intro-third {
-    background-image: url("/photos/intro.jpeg");
+    background-image: url("/photos/landing-1.jpg");
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -31,14 +30,15 @@
     right: 0;
     top: 0;
     bottom: 0;
-    filter: brightness(0.8);
     z-index: -1;
+    width: 100%
   }
   .intro-second {
-    background-image: url("/photos/landing-slideshow-2.jpeg");
+    background-image: url("/photos/landing-3.jpg")
+    
   }
   .intro-third {
-    background-image: url("/photos/landing-slideshow-3.jpeg");
+    background-image: url("/photos/landing-2.jpg");
   }
   .burger {
     display: none;
@@ -78,15 +78,7 @@
     }
   }
 
-  .scroller {
-    position: absolute;
-    bottom: 4rem;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    font-size: 4rem;
-    color: white;
-    animation: animation 1.5s infinite alternate;
-  }
+  
   .intro-text-wrapper {
     display: flex;
     align-items: center;
@@ -128,6 +120,18 @@
     z-index: 2;
     font-size: 5rem;
     color: green;
+  }
+  .consultation{
+    width: 7%;
+    text-align: center;
+    background-color: white;
+    font-size: 1.5rem;
+    position: fixed;
+    bottom: 15%;
+    right: 5%;
+    z-index: 2;
+    border-radius: 10%;
+    padding:1rem
   }
   .fb {
     margin-right: 1rem;
@@ -172,5 +176,10 @@
   .burger-black {
     color: black;
     z-index: 100;
+  }
+  .fixed{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

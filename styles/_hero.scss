@@ -1,18 +1,19 @@
 #hero {
-  min-height: 80vh;
+  position: relative;
+  .hero-wrapper{
+  min-height: 60vh;
   width: 80%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
- 
+  padding: 10rem 0 30em 0;
   
   .hero-descp {
     padding-left: 5rem;
     .quote {
       font-size: $text;
-      margin: 6rem 0;
+      margin: 3rem 0;
     }
   }
   .quote-name {
@@ -24,12 +25,11 @@
     border-radius: 50%;
     max-height: 230px;
   }
-  .heading-activities {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    line-height: 0.78;
-    color: #e2dddd;
-  }
+  //.wave-top{
+   // position: absolute;
+  //  width: 100%;
+  //  bottom: -60%;
+  //  z-index: -2;
+ //}
+}
 }
